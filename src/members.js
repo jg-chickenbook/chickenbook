@@ -7,7 +7,7 @@ export const members = [
     mainSkills: ["Java", "Spring Boot", "PostgreSQL"],
     bestProjects: ["Project 1", "Project 2"],
     phone: "123 456 789",
-    email: "jan.novak@gmail.com"
+    email: "jan.novak@gmaili.com"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const members = [
     mainSkills: ["React", "Vue", "Figma"],
     bestProjects: ["Project 1", "Project 2"],
     phone: "123 456 789",
-    email: "emilie.podhorska@gmail.com"
+    email: "emilie.podhorska@gmaili.com"
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const members = [
     mainSkills: ["PostgreSQL", "MySQL"],
     bestProjects: ["Project 1", "Project 2"],
     phone: "123 456 789",
-    email: "zikmund.vysoky@gmail.com"
+    email: "zikmund.vysoky@gmaili.com"
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const members = [
     mainSkills: ["Python", "Django", "PostgreSQL"],
     bestProjects: ["Project 1", "Project 2"],
     phone: "123 456 789",
-    email: "eliska.jedla@gmail.com"
+    email: "eliska.jedla@gmaili.com"
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const members = [
     mainSkills: ["C#", ".NET", "C++"],
     bestProjects: ["Project 1", "Project 2"],
     phone: "123 456 789",
-    email: "martin.zabrana@gmail.com"
+    email: "martin.zabrana@gmaili.com"
   },
   {
     id: 6,
@@ -57,6 +57,66 @@ export const members = [
     mainSkills: ["Java", "Kotlin", "Jetpack Compose"],
     bestProjects: ["Project 1", "Project 2"],
     phone: "123 456 789",
-    email: "jana.lorenz@gmail.com"
+    email: "jana.lorenz@gmaili.com"
+  },
+  {
+    id: 7,
+    status: "Employed",
+    name: "Emil Varga",
+    headline: "Backend Developer",
+    mainSkills: ["Java", "Spring Boot", "MongoDB"],
+    bestProjects: ["Project 1", "Project 2"],
+    phone: "123 456 789",
+    email: "emil.varga@gmaili.com"
+  },
+  {
+    id: 8,
+    status: "Looking for job",
+    name: "Lenka Masrnovska",
+    headline: "Data Analyst",
+    mainSkills: ["Python", "Panda", "R"],
+    bestProjects: ["Project 1", "Project 2"],
+    phone: "123 456 789",
+    email: "lenka.masrnovska@gmaili.com"
+  },
+  {
+    id: 9,
+    status: "Contractor",
+    name: "Jonatan Ledek",
+    headline: "Data Engineer",
+    mainSkills: ["Python", "PowerBI"],
+    bestProjects: ["Project 1", "Project 2"],
+    phone: "123 456 789",
+    email: "jonatan.ledek@gmaili.com"
+  },
+  {
+    id: 10,
+    status: "Student",
+    name: "Eva Jedla",
+    headline: "JavaScript Developer",
+    mainSkills: ["React", "Node.js", "Express.js"],
+    bestProjects: ["Project 1", "Project 2"],
+    phone: "123 456 789",
+    email: "eva.jedla@gmaili.com"
+  },
+  {
+    id: 11,
+    status: "Employed",
+    name: "Ivan Hrozny",
+    headline: "PowerBI Specialist",
+    mainSkills: ["PowerBI", "Excel", "MySQL"],
+    bestProjects: ["Project 1", "Project 2"],
+    phone: "123 456 789",
+    email: "ivan.hrozny@gmaili.com"
+  },
+  {
+    id: 12,
+    status: "Employed",
+    name: "Zuzana Svestkova",
+    headline: "DevOps Engineer",
+    mainSkills: ["AWS", "Python", "Terraform"],
+    bestProjects: ["Project 1", "Project 2"],
+    phone: "123 456 789",
+    email: "zuzana.svestkova@gmaili.com"
   }
 ]

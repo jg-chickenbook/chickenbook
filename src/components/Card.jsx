@@ -11,6 +11,10 @@ import {
   ContactInfo
 } from "./Card.styling";
 
+/**
+ * ! <details> won't be used in the final version
+ * ? What's the best way to display more information about person?
+ */
 
 const Card = ({member}) => {
   const skillList = member.mainSkills.map(
