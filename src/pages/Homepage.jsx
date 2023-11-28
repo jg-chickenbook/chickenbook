@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import { members as membersDummyList } from "../members";
-import { AppContainer, AppHeader, AppTitle } from "./App.styling";
+import { MainContainer, HeaderArea, AppTitle } from "./Homepage.styling";
 import ScrollView from "../components/ScrollView";
 
-function App() {
+export default function Homepage() {
 
   const [members, setMembers] = useState([]);
   const [searchfield, setSearchfield] = useState("");
@@ -24,19 +24,16 @@ function App() {
      member.mainSkills.join(" ").toLowerCase().includes(searchfield.toLowerCase());
   })
 
-  return !members.length ? (
-    <h1>Loading</h1>
-  ) : (
-    <AppContainer>
-      <AppHeader>
+
+  return (
+    <MainContainer>
+      <HeaderArea>
         <AppTitle>Chickenbook</AppTitle>
         <SearchBox searchChange={onSearchChange} />
-      </AppHeader>
+      </HeaderArea>
       <ScrollView>
         <CardList members={filteredMembers}/>
       </ScrollView>
-    </AppContainer>
+    </MainContainer>
   );
 }
-
-export default App;

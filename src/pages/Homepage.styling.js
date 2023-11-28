@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const AppContainer = styled.div`
+export const MainContainer = styled.div`
   text-align: center;
 `
 
-export const AppHeader = styled.div`
+export const HeaderArea = styled.div`
   display: flex;
   margin: 0 auto;
   justify-content: center;
