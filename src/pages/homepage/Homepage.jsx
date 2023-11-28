@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import CardList from "../components/CardList";
-import SearchBox from "../components/SearchBox";
-import { members as membersDummyList } from "../members";
+import CardList from "../../components/CardList";
+import SearchBox from "../../components/SearchBox";
+import { members as membersDummyList } from "../../members";
 import { MainContainer, HeaderArea, AppTitle } from "./Homepage.styling";
-import ScrollView from "../components/ScrollView";
+import ScrollView from "../../components/ScrollView";
 
 export default function Homepage() {
 
