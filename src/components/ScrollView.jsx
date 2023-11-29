@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledScrollView = styled.div`
   overflow-y: scroll;
-  border-top: 5px solid black;
+  border-top: 3px solid black;
   height: 85vh;
   padding: 15px;
 `

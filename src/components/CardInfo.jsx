@@ -43,7 +43,7 @@ const ToDetailButton = styled.button`
   background-color: #B486FF;
   border-radius: 0.7rem;
   border: 2px solid #191919;
-  box-shadow: 3px 3px #191919;
+  box-shadow: 3px 5px #191919;
   padding: 5px;
   margin-top: 25px;
   transition: all .5s ease; 
@@ -54,7 +54,7 @@ const ToDetailButton = styled.button`
 
   &:active {
     background-color: #C39EFF;
-    box-shadow: 1px 1px #191919;
+    box-shadow: 1px 3px #191919;
   }
 `
 

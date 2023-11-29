@@ -6,10 +6,14 @@ const SearchBoxContainer = styled.div`
 `
 const SearchField = styled.input`
   padding: 15px;
-  border-radius: .5rem;
-  border-style: solid green;
-  border-width: 1px;
-  background-color: lightcyan;
+  background-color: #FBFCD3;
+  border-radius: 0.7rem;
+  border: 2px solid #191919;
+  outline: none;
+
+  &:focus {
+    background-color: white;
+  }
 `
 
 const SearchBox = ({ searchChange }) => {
