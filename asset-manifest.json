@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/chickenbook/static/css/main.7aff5bde.css",
+    "main.js": "/chickenbook/static/js/main.7f02fdd7.js",
+    "static/media/eggshell.png": "/chickenbook/static/media/eggshell.4623333e85ccc731ca6f.png",
+    "index.html": "/chickenbook/index.html",
+    "main.7aff5bde.css.map": "/chickenbook/static/css/main.7aff5bde.css.map",
+    "main.7f02fdd7.js.map": "/chickenbook/static/js/main.7f02fdd7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7aff5bde.css",
+    "static/js/main.7f02fdd7.js"
+  ]
+}
