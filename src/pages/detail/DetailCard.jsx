@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import InfoBubble from "./InfoBubble";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { members } from "../../members";
 
 const PageContainer = styled.div`
   display: flex;
@@ -31,13 +32,13 @@ const BubbleContainer = styled.div`
   gap: 10px;
 `
 
-const LeftBubbleContainer = styled.div`
+const LeftColumn = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
 `
 
-const RightBubbleContainer = styled.div`
+const RightColumn = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -49,34 +50,71 @@ const BubbleTitle = styled.legend`
   font-weight: bold;
 `
 
+const SkillList = styled.ul`
+  list-style-type: circle;
+`
+const ProjectList = styled.ul`
+  list-style-type: none;
+`
+const ContactInfo = styled.ul`
+  list-style-type: none;
+`
+
 export default function DetailCard() {
+
+  const { index } = useParams();
+
+  const member = members[index];
+
+  const skills = member.mainSkills.map((skill, key) => {
+    return <li key={key}>{skill}</li>
+  });
+
+  const projects = member.bestProjects.map((project, key) => {
+    return <li key={key}>{project}</li>
+  });
+
+
+  const email = member.email;
+  const phone = member.phone;
 
   return (
     <PageContainer>
       <CardView>
-        <Header />
+        <Header 
+          name={member.name} 
+          headline={member.headline} 
+          status={member.status} 
+        />
         <BubbleContainer>
-          <LeftBubbleContainer>
+          <LeftColumn>
             <InfoBubble>
               <BubbleTitle>Skills</BubbleTitle>
-              <p>Some text in a bubble</p>
+              <SkillList>
+                {skills}
+              </SkillList>
             </InfoBubble>
             <InfoBubble>
               <BubbleTitle>Projects</BubbleTitle>
-              <p>Some text in a bubble</p>
+              <ProjectList>
+                {projects}
+              </ProjectList>
             </InfoBubble>
             <InfoBubble>
               <BubbleTitle>Contact</BubbleTitle>
-              <p>Some text in a bubble</p>
+              <ContactInfo>
+                <li>Email: {email}</li>
+                <li>Phone: {phone}</li>
+              </ContactInfo>
             </InfoBubble>
-          </LeftBubbleContainer>
+          </LeftColumn>
         
-          <RightBubbleContainer>
+          <RightColumn>
             <InfoBubble>
               <BubbleTitle>About</BubbleTitle>
-              <p>Some text in a bubble</p>
+              <p>{JSON.stringify(member)}</p>
             </InfoBubble>
-          </RightBubbleContainer>
+          </RightColumn>
         </BubbleContainer>
       </CardView>
     </PageContainer>

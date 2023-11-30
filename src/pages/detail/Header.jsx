@@ -34,15 +34,15 @@ const Status = styled.h3`
 `
 
 
-const Header = () => {
+const Header = ({ name, headline, status }) => {
 
   return (
     <Container>
       <ProfileImage src={JgChicken} />
       <TextBlock>
-        <Name>Name Namesson</Name>
-        <Headline>Frontend Developer</Headline>
-        <Status>Employed</Status>
+        <Name>{name}</Name>
+        <Headline>{headline}</Headline>
+        <Status>{status}</Status>
       </TextBlock>
     </Container>
   );

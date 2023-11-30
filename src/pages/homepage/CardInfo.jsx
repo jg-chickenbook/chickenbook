@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import eggshell from "../../assets/eggshell.png";
 import { Link } from "react-router-dom";
+import { members } from "../../members";
 
 const Container = styled.div`
   background-image: url(${eggshell});
@@ -66,7 +67,7 @@ const CardInfo = ({ member }) => {
         <Status>{member.status}</Status>
         <Name>{member.name}</Name>
         <Headline>{member.headline}</Headline>
-        <Link to="/detail">
+        <Link to={`/detail/${members.indexOf(member)}`} >
           <ToDetailButton>More information</ToDetailButton>
         </Link>
       </TextBlock>

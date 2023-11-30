@@ -9,7 +9,7 @@ const router = createHashRouter([
     element: <Homepage />,
   },
   {
-    path: "/detail",
+    path: "/detail/:index",
     element: <DetailCard />
   }
 ]);
