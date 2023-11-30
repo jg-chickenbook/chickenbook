@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import CardList from "../../components/CardList";
-import SearchBox from "../../components/SearchBox";
+import CardList from "./CardList";
+import SearchBox from "./SearchBox";
 import { members as membersDummyList } from "../../members";
 import { MainContainer, HeaderArea, AppTitle } from "./Homepage.styling";
-import ScrollView from "../../components/ScrollView";
+import ScrollView from "./ScrollView";
 
 export default function Homepage() {
 
@@ -23,7 +23,6 @@ export default function Homepage() {
      member.headline.toLowerCase().includes(searchfield.toLowerCase()) ||
      member.mainSkills.join(" ").toLowerCase().includes(searchfield.toLowerCase());
   })
-
 
   return (
     <MainContainer>

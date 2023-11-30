@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import eggshell from "../assets/eggshell.png";
+import eggshell from "../../assets/eggshell.png";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   background-image: url(${eggshell});
@@ -58,14 +59,16 @@ const ToDetailButton = styled.button`
   }
 `
 
-const CardInfo = ({ name, status, headline }) => {
+const CardInfo = ({ member }) => {
   return (
     <Container>
       <TextBlock>
-        <Status>{status}</Status>
-        <Name>{name}</Name>
-        <Headline>{headline}</Headline>
-        <ToDetailButton>More information</ToDetailButton>
+        <Status>{member.status}</Status>
+        <Name>{member.name}</Name>
+        <Headline>{member.headline}</Headline>
+        <Link to="/detail">
+          <ToDetailButton>More information</ToDetailButton>
+        </Link>
       </TextBlock>
     </Container>
   );

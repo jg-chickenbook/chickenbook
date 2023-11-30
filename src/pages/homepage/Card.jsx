@@ -1,5 +1,5 @@
 import React from "react";
-import chicken from "../assets/chicken.png";
+import chicken from "../../assets/chicken.png";
 import CardInfo from "./CardInfo";
 import styled from "styled-components";
 
@@ -19,12 +19,11 @@ const ProfileCard = styled.div`
 `
 
 const ProfileImage = styled.img`
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 175px;
+  height: 175px;
   margin: auto;
   display: block;
-  margin-bottom: -45px;
+  margin-bottom: -10px;
 `
 
 const Card = ({member}) => {
@@ -33,9 +32,7 @@ const Card = ({member}) => {
     <ProfileCard>
       <ProfileImage alt="Profile Image" src={chicken} />
       <CardInfo 
-        name={member.name} 
-        status={member.status} 
-        headline={member.headline}
+        member={member}
       />
     </ProfileCard>
   );
