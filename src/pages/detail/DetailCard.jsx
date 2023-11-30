@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "./Header";
 import InfoBubble from "./InfoBubble";
 import { useParams } from "react-router-dom";
-import { members } from "../../members";
+import { members } from "../../data/members";
 
 const PageContainer = styled.div`
   display: flex;

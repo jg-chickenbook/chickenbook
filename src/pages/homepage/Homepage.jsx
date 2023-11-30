@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CardList from "./CardList";
 import SearchBox from "./SearchBox";
-import { members as membersDummyList } from "../../members";
+import { members as membersDummyList } from "../../data/members";
 import { MainContainer, HeaderArea, AppTitle } from "./Homepage.styling";
 import ScrollView from "./ScrollView";
 

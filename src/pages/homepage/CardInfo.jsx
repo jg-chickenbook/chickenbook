@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import eggshell from "../../assets/eggshell.png";
 import { Link } from "react-router-dom";
-import { members } from "../../members";
+import { members } from "../../data/members";
 
 const Container = styled.div`
   background-image: url(${eggshell});
