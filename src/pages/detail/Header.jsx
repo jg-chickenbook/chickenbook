@@ -8,6 +8,7 @@ const Container = styled.div`
 `
 const ProfileImage = styled.img`
   border-radius: 50%;
+  border: 2px solid #191919;
   width: 200px;
   height: 200px;
 `

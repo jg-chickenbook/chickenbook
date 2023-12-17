@@ -1,9 +1,29 @@
 import React, { useState, useEffect } from "react";
-import CardList from "./CardList";
+import CardList from "./cards/CardList";
 import SearchBox from "./SearchBox";
 import { members as membersDummyList } from "../../data/members";
-import { MainContainer, HeaderArea, AppTitle } from "./Homepage.styling";
 import ScrollView from "./ScrollView";
+import styled from "styled-components";
+
+const MainContainer = styled.div`
+  text-align: center;
+`
+
+const HeaderArea = styled.div`
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+`
+
+const AppTitle = styled.h1`
+  @media (max-width: 700px) {
+    margin-bottom: 0;
+  }
+`
 
 export default function Homepage() {
 

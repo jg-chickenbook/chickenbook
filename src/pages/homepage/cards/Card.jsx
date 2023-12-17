@@ -1,5 +1,5 @@
 import React from "react";
-import chicken from "../../assets/chicken.png";
+import chicken from "../../../assets/chicken.png";
 import CardInfo from "./CardInfo";
 import styled from "styled-components";
 
