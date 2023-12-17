@@ -1,7 +1,7 @@
 import React from "react";
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import Homepage from "./pages/homepage/Homepage";
-import DetailCard from "./pages/detail/DetailCard";
+import Detail from "./pages/detail/Detail";
 
 const router = createHashRouter([
   {
@@ -10,7 +10,7 @@ const router = createHashRouter([
   },
   {
     path: "/detail/:index",
-    element: <DetailCard />
+    element: <Detail />
   }
 ]);
 
