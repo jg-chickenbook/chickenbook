@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import eggshell from "../../../assets/eggshell.png";
-import { Link } from "react-router-dom";
-import { members } from "../../../data/members";
 
 const Container = styled.div`
   background-image: url(${eggshell});
@@ -14,62 +12,39 @@ const Container = styled.div`
   height: 200px;
   display: flex;
   justify-content: center;
-  align-items: center;
 `
 
 const TextBlock = styled.div`
   width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
 const Status = styled.p`
-  font-size: small;
+  font-size: 0.8rem;
   color: gray;
-  text-align: right;
-  margin-top: -5px;
-  margin-right: 5px;
+  font-weight: bold;
 `
 
 const Name = styled.h3`
-  margin-top: 5px;
-  margin-bottom: 0;
+  margin-top: 25px;
 `
 
 const Headline = styled.p`
-  color: blue;
+  color:  #8D82F6;
+  font-weight: bold;
   margin-top: 0;
-`
-
-const ToDetailButton = styled.button`
-  background-color: white;
-  border-style: none;
-  background-color: #B486FF;
-  border-radius: 0.7rem;
-  border: 2px solid #191919;
-  box-shadow: 3px 5px #191919;
-  padding: 5px;
-  margin-top: 25px;
-  transition: all .5s ease; 
-
-  &:hover {
-    background-color: #B486FF;
-  }
-
-  &:active {
-    background-color: #C39EFF;
-    box-shadow: 1px 3px #191919;
-  }
 `
 
 const CardInfo = ({ member }) => {
   return (
     <Container>
       <TextBlock>
-        <Status>{member.status}</Status>
         <Name>{member.name}</Name>
         <Headline>{member.headline}</Headline>
-        <Link to={`/detail/${members.indexOf(member)}`} >
-          <ToDetailButton>More information</ToDetailButton>
-        </Link>
+        <Status>{member.status}</Status>
       </TextBlock>
     </Container>
   );
