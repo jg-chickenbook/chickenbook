@@ -7,6 +7,7 @@ const Container = styled.div`
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: contain;
+  //background-color: #FFFFFF;
   padding: 5px;
   width: 300px;
   height: 200px;
@@ -23,17 +24,20 @@ const TextBlock = styled.div`
 `
 
 const Status = styled.p`
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: gray;
   font-weight: bold;
 `
 
 const Name = styled.h3`
   margin-top: 25px;
+  //color:  #9148FF;
+  font-weight: bold;
+  font-size: 1.3rem;
 `
 
 const Headline = styled.p`
-  color:  #8D82F6;
+  color:  #974EF8;
   font-weight: bold;
   margin-top: 0;
 `
