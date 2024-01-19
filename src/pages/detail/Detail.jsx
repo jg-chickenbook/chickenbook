@@ -1,40 +1,53 @@
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { members as membersDummyList } from "../../data/members";
 import CardView from "./CardView";
 import Header from "./Header";
-import { useParams } from "react-router-dom";
-import { members } from "../../data/members";
 import BubbleContainer from "./bubbles/BubbleContainer";
+import ButtonBack from "./ButtonBack";
 
-export default function DetailContent() {
+export default function Detail() {
+  const { id } = useParams();
+  const [member, setMember] = useState(null);
 
-  const { index } = useParams();
+  useEffect(() => {
+    const findMember = membersDummyList.find((member) => member.id == parseInt(id));
+    if (findMember) {
+      setMember(findMember)
+      } else {
+        setMember(null)
+    }
+  }, [id]);
 
-  const member = members[index];
+  if (!member) {
+     return <div>Loading...</div>;
+   }
 
-  const skills = member.mainSkills.map((skill, key) => {
-    return <div key={key}>{skill}</div>
-  });
+  const skills = member.mainSkills.map((skill, key) => <li key={ key }>{ skill }</li>);
 
-  const projects = member.bestProjects.map((project, key) => {
-    return <li key={key}>{project}</li>
-  });
-
-  const email = member.email;
-  const phone = member.phone;
+  const projects = member.bestProjects.map((project, key) => (
+    <li key={ key }>
+       <a href={ project.link }>{ project.name }</a>
+    </li>
+  ));
 
   return (
-    <CardView>
-      <Header 
-        name={member.name} 
-        headline={member.headline} 
-        status={member.status} 
-      />
-      <BubbleContainer
-        skillsList={skills}
-        projectsList={projects}
-        email={email}
-        phone={phone}
-        about={JSON.stringify(member)}
-      />
-    </CardView>
+    <>
+      <CardView>
+        <Header key={ member.id }
+          name={ member.name }
+          headline={ member.headline }
+          status={ member.status }
+        />
+        <BubbleContainer
+          skillsList={ skills }
+          projectsList={ projects }
+          email={ member.email }
+          phone={ member.phone }
+          about={ member.about }
+        />
+      </CardView>
+      <ButtonBack />
+    </>
   );
 }

@@ -2,18 +2,21 @@ import React from "react";
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import Homepage from "./pages/homepage/Homepage";
 import Detail from "./pages/detail/Detail";
+import "./style/main.scss";
 
-const router = createHashRouter([
-  {
-    path: "/",
-    element: <Homepage />,
-  },
-  {
-    path: "/detail/:index",
-    element: <Detail />
-  }
-]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+
+  const router = createHashRouter([
+    {
+      path: "/",
+      element: <Homepage />,
+    },
+    {
+      path: "/detail/:id",
+      element: <Detail />
+    }
+  ]);
+
+  return <RouterProvider router={ router } />;
 }

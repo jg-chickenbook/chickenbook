@@ -1,0 +1,58 @@
+@import "variables";
+
+.card {
+  display: inline-block;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  max-width: 175px;
+  // max-height: 145px;
+  margin: auto;
+  display: block;
+  margin-bottom: -10px;
+}
+
+.card__container {
+  background: url("../assets/eggshell.png") no-repeat center center;
+  background-size: contain;
+  padding: 5px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.text__block {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.status {
+  font-size: 0.9rem;
+  color: $color-text-700;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.name {
+  margin-top: 25px;
+  //color:  #9148FF;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.position {
+  color:  $color-subtitle;
+  font-weight: bold;
+  margin-top: 0;
+}
