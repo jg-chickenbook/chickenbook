@@ -1,0 +1,12 @@
+.search__input {
+  padding: 15px;
+  background-color: #FBFCD3;
+  border-radius: 0.7rem;
+  border: 2px solid #191919;
+  outline: none;
+  margin-left: 10px;
+
+  &:focus {
+    background-color: white;
+  }
+}

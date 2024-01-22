@@ -1,0 +1,83 @@
+@import "variables";
+
+.detail__container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.member__card {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-primary-200;
+  border-radius: 0.7rem;
+  border: 2px solid $color-text-900;
+  box-shadow: 3px 5px $color-text-900;
+  padding: 1.563rem;
+  // min-height: 50rem;
+  max-width: 62.5rem;
+}
+
+.container__column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.header__detail {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.563rem;
+
+ @media (max-width: 768px) {
+    padding: 0;
+  }
+
+}
+
+.detail__image {
+  border-radius: 50%;
+  border: 2px solid $color-text-900;
+  width: 200px;
+  height: 200px;
+  margin-right: 2rem;
+}
+
+.detail__inner {
+  display: block;
+  padding: 1.563rem;
+}
+
+.detail__name {
+  color: $detail-heading;
+  font-size: 4rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.detail__position {
+  color: $color-subtitle;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.detail__status {
+  color: $color-text-700;
+  margin-top: 0;
+}
+
+.detail__legend {
+  margin-left: 1.563rem;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.detail__fieldset {
+  border-radius: 1.5rem;
+  border: 2px solid $color-text-900;
+  background-color: $color-light;
+  height: 100%;
+}

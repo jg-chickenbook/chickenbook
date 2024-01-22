@@ -1,0 +1,36 @@
+@import "variables";
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: $color-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid $color-secondary;
+  padding-block: 1rem;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+}
+
+.main__title {
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.main__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-inline: 0.938rem;
+
+  @media screen and (min-width: 768px) {
+    row-gap: 1rem;
+  }
+
+}
