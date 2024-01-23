@@ -2,9 +2,9 @@
 
 .button__primary {
   border-style: none;
-  background-color: $color-button;
+  //background-color: $color-button;
   color: $color-text;
-  border-radius: 1.875rem;
+  border-radius: 5px;
   border: 2px solid $color-text-900;
   padding: 0.625rem 1.25rem;
   font-size: 0.9rem;
@@ -15,7 +15,7 @@
   cursor: pointer;
   text-decoration: none;
   display: block;
-  max-width: 13rem;
+  max-width: 10rem;
   margin-inline: auto;
   text-align: center;
 

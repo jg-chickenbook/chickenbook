@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ToDetailButton = ({ member }) => {
   return (
     <Link className="button__primary" to={ `/detail/${member.id}` } >
-      More information
+      More info
     </Link>
   );
 };
