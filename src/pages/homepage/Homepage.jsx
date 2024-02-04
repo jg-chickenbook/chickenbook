@@ -3,7 +3,8 @@ import CardList from "./cards/CardList";
 import SearchBox from "./SearchBox";
 import { members as membersDummyList } from "../../data/members";
 import ScrollView from "./ScrollView";
-
+import "../login/LogInForm";
+import { Link } from "react-router-dom";
 
 export default function Homepage() {
 
@@ -29,6 +30,7 @@ export default function Homepage() {
       <header className="header">
         <h1 className="main__title">Chickenbook</h1>
         <SearchBox searchChange={ onSearchChange } />
+        <Link className="nav__link" to="/login">Log In</Link>
       </header>
       <main>
         <ScrollView>
@@ -36,6 +38,5 @@ export default function Homepage() {
         </ScrollView>
       </main>
     </>
-
   );
 }
