@@ -9,18 +9,23 @@
   align-items: center;
   gap: 1rem;
   border-bottom: 3px solid $color-secondary;
+  padding: 2rem;
   padding-block: 1rem;
   margin-bottom: 1.5rem;
+
+  .search__input {
+    margin-left: auto; 
+  }
 
   .nav__link {
     color: $color-text-900;
     text-decoration: none;
+    margin-left: auto; 
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
   }
-
 }
 
 .main__title {
