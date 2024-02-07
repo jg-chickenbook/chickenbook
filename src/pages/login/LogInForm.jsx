@@ -1,5 +1,6 @@
 import React from "react";
 import "../../style/_login-form.scss";
+import ButtonBack from "../detail/ButtonBack";
 
 function LogInForm() {  
   return (
@@ -11,7 +12,8 @@ function LogInForm() {
         <label htmlFor="password">Password</label>
         <input type="password" id="password" name="password" required />
         <button className="button__primary" type="submit">Log in</button>
-      </form>
+      </form> 
+         <ButtonBack />
     </div>
   );
 }
