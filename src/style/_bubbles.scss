@@ -13,12 +13,29 @@
 
 .skills__list {
   list-style-type: none;
-  padding: 0 0.625rem 0;
+  padding: 0;
+  // margin: 0;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  height: 4.45rem;
   font-weight: 600;
+  gap: 0.25rem;
+  li {
+    padding: .5rem .625rem;
+    border: 1px solid $color-text-900;
+    background-color: $color-light;
+    margin-bottom: 0;
+  }
+}
+
+.detail__fieldset:has(.skills__list) {
+  border: none;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  .detail__legend {
+    border-bottom: 1px solid $color-text-900;
+    padding-bottom: 0;
+    margin-bottom: 5px;
+  }
 }
 
 .project__list {
