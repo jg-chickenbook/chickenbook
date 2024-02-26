@@ -21,7 +21,9 @@
   gap: 0.25rem;
   li {
     padding: .5rem .625rem;
-    border: 1px solid $color-text-900;
+    border: 2px solid $color-text-900;
+   // box-shadow: 3px 5px $color-text-900;
+    border-radius: 0.7rem;
     background-color: $color-light;
     margin-bottom: 0;
   }
