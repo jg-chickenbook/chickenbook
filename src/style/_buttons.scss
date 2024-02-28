@@ -30,6 +30,15 @@
     color: $color-text;
     box-shadow: 1px 3px $color-text-900;
   }
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin: 0.938rem 0;
+  }
+
+  @media  (max-width: 380px) {
+    padding: 0.625rem 0.938rem;
+  }
 }
 
 a {
@@ -63,5 +72,16 @@ a {
     span {
       visibility: visible;
     }
+  }
+  
+  @media (max-width: 768px) {
+    position: static;
+    display: inline-block;
+    margin-top: 0.938rem;
+    margin-right: 0;
+  }
+
+  @media (max-width: 380px) {
+    margin-top: 0.625rem;
   }
 }
