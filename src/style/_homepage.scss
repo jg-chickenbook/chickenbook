@@ -9,7 +9,7 @@
   align-items: center;
   gap: 1rem;
   border-bottom: 3px solid $color-secondary;
-  padding: 2rem;
+  padding: 0 3rem;
   padding-block: 1rem;
   margin-bottom: 1.5rem;
 
@@ -19,8 +19,13 @@
 
   .nav__link {
     color: $color-text-900;
+    font-size: 1.2rem;
+    font-weight: 900;
     text-decoration: none;
     margin-left: auto; 
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   @media (max-width: 768px) {

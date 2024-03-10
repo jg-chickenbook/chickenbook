@@ -13,7 +13,7 @@
     flex-direction: column;
     max-width: 30rem;
     margin: 0 auto;
-    padding: 3rem 8rem;
+    padding: 3rem 6rem;
     background-color: $color-primary-200;
     border: 2px solid $color-secondary;
     border-radius: 4px;
@@ -41,6 +41,18 @@
       color: $color-text;
       font-size: 1.2rem;
       border: 2px solid $color-secondary;
+    }
+
+    .login-link {
+      padding: 1rem 2rem;
+      text-align: center;
+      color: $color-text;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
