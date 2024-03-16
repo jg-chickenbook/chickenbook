@@ -24,10 +24,38 @@ function AuthForm() {
     setIsLogin(!isLogin);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Here, you'd handle form submission, likely sending data to your backend
-    console.log(formState);
+  
+    // validation
+    if (!formState.email || !formState.password || (!isLogin && !formState.username)) {
+      alert("Please fill in all fields");
+      return;
+    }
+  
+    // endpoint URL
+    const url = isLogin ? "http://127.0.0.1:8000" : "http://127.0.0.1:8000/signup";
+  
+    // request options
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formState),
+    };
+  
+    // Send the request
+    const response = await fetch(url, options);
+  
+    // request successful
+    if (!response.ok) {
+      const message = `An error has occurred: ${response.status}`;
+      throw new Error(message);
+    }
+  
+    const data = await response.json();
+  
+  
+    console.log(data);
   };
 
   return (
