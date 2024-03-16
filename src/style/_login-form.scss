@@ -8,6 +8,7 @@
     font-size: 3rem;
     font-weight: 600;
   }
+  
   form {
     display: flex; 
     flex-direction: column;
@@ -33,6 +34,7 @@
       border: 2px solid $color-secondary;
       border-radius: 4px;
       color: $color-text;
+      width: 100%; // Set the width to 100%
     }
     
     button {
@@ -53,6 +55,16 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+
+    .auth-input {
+      display: block;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 2px solid $color-secondary;
+      border-radius: 4px;
+      color: $color-text;
+      width: 100%; // Set the width to 100%
     }
   }
 }

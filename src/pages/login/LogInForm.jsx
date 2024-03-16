@@ -38,6 +38,7 @@ function AuthForm() {
         <div className="login-form">
           <label htmlFor="password">Username</label>
           <input
+            className="auth-input"
             name="username"
             type="text"
             placeholder="Username"
