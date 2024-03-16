@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../style/_login-form.scss";
 import ButtonBack from "../detail/ButtonBack";
+import { useHistory } from "react-router-dom";
 
 function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);
@@ -23,6 +24,8 @@ function AuthForm() {
     event.preventDefault();
     setIsLogin(!isLogin);
   };
+
+  const history = useHistory();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -53,8 +56,14 @@ function AuthForm() {
     }
   
     const data = await response.json();
-  
-  
+
+    if (isLogin) {
+      // store the token in the local storage
+      localStorage.setItem("token", data.token);
+      // redirect to the home page
+      history.push("/");
+    }
+
     console.log(data);
   };
 
