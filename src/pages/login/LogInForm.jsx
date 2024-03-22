@@ -37,7 +37,8 @@ function AuthForm() {
     }
   
     // endpoint URL
-    const url = isLogin ? "http://127.0.0.1:8000" : "http://127.0.0.1:8000/signup";
+    // const url = isLogin ? "http://127.0.0.1:8000" : "http://127.0.0.1:8000/signup";
+    const url = isLogin ? "http://127.0.0.1:8000/api/accounts/login" : "http://127.0.0.1:8000/api/accounts/register";
   
     // request options
     const options = {
@@ -61,7 +62,7 @@ function AuthForm() {
       // store the token in the local storage
       localStorage.setItem("token", data.token);
       // redirect to the home page
-      navigate.push("/");
+      navigate("/");
     }
 
     console.log(data);
