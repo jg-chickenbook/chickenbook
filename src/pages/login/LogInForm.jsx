@@ -72,7 +72,7 @@ function AuthForm() {
     event.preventDefault();
   
     // validation
-    if (!formState.email || !formState.password || (!isLogin && !formState.username)) {
+    if (!formState.username || !formState.password || (!isLogin && !formState.email)) {
       alert("Please fill in all fields");
       return;
     }
@@ -93,6 +93,7 @@ function AuthForm() {
         if (isLogin) {
           // store the token in local storage
           localStorage.setItem("token", data.token);
+          localStorage.setItem("username", data.user.username);
           // redirect to the home page
           navigate("/");  
           console.log(data);
@@ -118,7 +119,17 @@ function AuthForm() {
     <h1 className="login-title">{isLogin ? "Log in" : "Sign up"}</h1>
       {!isLogin && (
         <div className="login-form">
-          <label htmlFor="password">Username</label>
+          <label htmlFor="email">Email</label>
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={formState.email}
+            onChange={handleInputChange}
+          />
+        </div>
+      )}
+      <label htmlFor="password">Username</label>
           <input
             className="auth-input"
             name="username"
@@ -127,16 +138,6 @@ function AuthForm() {
             value={formState.username}
             onChange={handleInputChange}
           />
-        </div>
-      )}
-      <label htmlFor="email">Email</label>
-      <input
-        name="email"
-        type="email"
-        placeholder="Email"
-        value={formState.email}
-        onChange={handleInputChange}
-      />
       <label htmlFor="password">Password</label>
       <input
         name="password"
