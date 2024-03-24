@@ -5,6 +5,8 @@ import Detail from "./pages/detail/Detail";
 import LogInForm from "./pages/login/LogInForm";
 import "./style/main.scss";
 
+import { Toaster } from "sonner";
+
 
 export default function App() {
 
@@ -23,5 +25,8 @@ export default function App() {
     }
   ]);
 
-  return <RouterProvider router={ router } />;
+  return (<> 
+  <RouterProvider router={ router } />
+  <Toaster richColors expand={true} />
+  </>);
 }

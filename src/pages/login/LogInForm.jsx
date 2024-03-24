@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../style/_login-form.scss";
 import ButtonBack from "../detail/ButtonBack";
 import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);
@@ -73,7 +74,7 @@ function AuthForm() {
   
     // validation
     if (!formState.username || !formState.password || (!isLogin && !formState.email)) {
-      alert("Please fill in all fields");
+      toast.warning("Please fill in all fields");
       return;
     }
   
@@ -99,17 +100,17 @@ function AuthForm() {
           console.log(data);
         } else {
           // After successful registration, show a message and redirect to the login form
-          alert("Registration successful! Please log in.");
+          toast.success("Registration successful! Please log in.");
           setIsLogin(true); // Switch to the login form
           console.log(data);
         }
       } else {
         // Handle server response errors (e.g., invalid credentials or existing user)
-        alert(data.detail || "User with this username or email already exists");
+        toast.warning(data.detail || "User with this username or email already exists");
       }
     } catch (error) {
       // Handle network errors
-      alert("Network error: Could not connect to the server.");
+      toast.error("Network error: Could not connect to the server.");
     }
   };
 

@@ -50,6 +50,9 @@ import ScrollView from "./ScrollView";
 import "../login/LogInForm";
 import { Link } from "react-router-dom";
 
+import { toast } from "sonner";
+
+
 export default function Homepage() {
   const [members, setMembers] = useState([]);
   const [searchfield, setSearchfield] = useState("");
@@ -89,7 +92,7 @@ export default function Homepage() {
 
     // Check if the token exists
     if (!token) {
-      alert("No token found");
+        toast.error("No token found");
       return;
     }
 
@@ -116,12 +119,12 @@ export default function Homepage() {
       localStorage.removeItem("username");
 
       // Optionally, show a success message
-      alert("Logged out successfully");
+      toast.info("Logged out successfully");
 
       // Redirect to the login page or refresh the homepage
       navigate("/login");
     } catch (error) {
-      alert(error.message);
+      toast.error(error.message);
     }
   };
 
