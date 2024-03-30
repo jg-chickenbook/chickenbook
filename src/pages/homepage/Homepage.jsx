@@ -83,7 +83,7 @@ export default function Homepage() {
         <h1 className="main__title">Chickenbook</h1>
         <SearchBox searchChange={onSearchChange} />
         {isLoggedIn ? (
-          <div>
+          <div className="user__box">
             <span className="nav__username">Welcome, {username}  </span>
             <Link className="nav__link" onClick={handleLogout}>Log Out</Link>
           </div>
