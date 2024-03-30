@@ -48,6 +48,10 @@
     font-weight: 900;
     text-decoration: none;
     margin-left: auto; 
+    cursor: pointer;
+    &:hover {
+      color: $link-color-hover;
+    }
   }
 
   @media (max-width: 768px) {
