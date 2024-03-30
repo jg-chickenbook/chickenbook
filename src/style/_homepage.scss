@@ -1,0 +1,78 @@
+@import "variables";
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: $color-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  border-bottom: 3px solid $color-secondary;
+  padding: 0 3rem;
+  padding-block: 1rem;
+  margin-bottom: 1.5rem;
+
+  .search__input {
+    margin-left: auto; 
+  }
+
+  .nav__link {
+    color: $color-text-900;
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-decoration: none;
+    margin-left: auto; 
+    border-radius: 5px;
+    border: 2px solid $color-text-900;
+    padding: 0.625rem 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: all .5s ease;
+    &:hover {
+      background-color: $color-button-hover;
+      color: $color-text;
+      box-shadow: 3px 5px $color-text-900;
+    }
+  }
+
+  .user__box {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .nav__username {
+    color: $color-text-900;
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-decoration: none;
+    margin-left: auto; 
+    cursor: pointer;
+    &:hover {
+      color: $link-color;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.main__title {
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.main__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-inline: 0.938rem;
+
+  @media screen and (min-width: 768px) {
+    row-gap: 1rem;
+  }
+
+}

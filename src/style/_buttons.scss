@@ -1,0 +1,87 @@
+@import "variables";
+
+.button__primary {
+  border-style: none;
+  //background-color: $color-button;
+  color: $color-text;
+  border-radius: 5px;
+  border: 2px solid $color-text-900;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 0.938rem;
+  margin-bottom: 1.563rem;
+  transition: all .5s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  max-width: 10rem;
+  margin-inline: auto;
+  text-align: center;
+
+  &:hover {
+    background-color: $color-button-hover;
+    color: $color-text;
+    box-shadow: 3px 5px $color-text-900;
+  }
+
+  &:active {
+    background-color: $color-button-active;
+    color: $color-text;
+    box-shadow: 1px 3px $color-text-900;
+  }
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin: 0.938rem 0;
+  }
+
+  @media  (max-width: 380px) {
+    padding: 0.625rem 0.938rem;
+  }
+}
+
+a {
+  color: $link-color;
+  font-weight: bold;
+  &:hover {
+    color: $link-color-hover;
+  }
+  &:active {
+    color: $link-color-active;
+  }
+}
+
+.button--back {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  span {
+    visibility: hidden;
+  }
+  &:hover {
+    span {
+      visibility: visible;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    position: static;
+    display: inline-block;
+    margin-top: 0.938rem;
+    margin-right: 0;
+  }
+
+  @media (max-width: 380px) {
+    margin-top: 0.625rem;
+  }
+}
