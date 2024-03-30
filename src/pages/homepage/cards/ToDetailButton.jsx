@@ -11,4 +11,3 @@ const ToDetailButton = ({ member }) => {
 };
 
 export default ToDetailButton;
-
