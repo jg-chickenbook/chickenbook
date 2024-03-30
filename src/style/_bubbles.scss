@@ -34,7 +34,6 @@
   background-color: transparent;
   margin-bottom: 1rem;
   .detail__legend {
-    border-bottom: 1px solid $color-text-900;
     padding-bottom: 0;
     margin-bottom: 5px;
   }
@@ -56,6 +55,7 @@
 }
 
 li {
+  font-weight: 600;
   margin-bottom: .35rem;
 }
 

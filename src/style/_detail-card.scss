@@ -14,7 +14,7 @@
   background-color: $color-primary-200;
   border-radius: 0.7rem;
   border: 2px solid $color-text-900;
-  box-shadow: 3px 5px $color-text-900;
+  box-shadow: 8px 10px $color-text-900;
   padding: 1.563rem;
   // min-height: 50rem;
   max-width: 62.5rem;
@@ -61,7 +61,7 @@
 }
 
 .detail__name {
-  color: $detail-heading;
+  color: $color-title;
   font-size: 4rem;
   margin-top: 0;
   margin-bottom: 0;
