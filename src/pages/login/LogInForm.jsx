@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../style/_login-form.scss";
 import ButtonBack from "../detail/ButtonBack";
 import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);
@@ -31,41 +32,45 @@ function AuthForm() {
     event.preventDefault();
   
     // validation
-    if (!formState.email || !formState.password || (!isLogin && !formState.username)) {
-      alert("Please fill in all fields");
+    if (!formState.username || !formState.password || (!isLogin && !formState.email)) {
+      toast.warning("Please fill in all fields");
       return;
     }
   
-    // endpoint URL
-    // const url = isLogin ? "http://127.0.0.1:8000" : "http://127.0.0.1:8000/signup";
     const url = isLogin ? "http://127.0.0.1:8000/api/accounts/login" : "http://127.0.0.1:8000/api/accounts/register";
   
-    // request options
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formState),
     };
   
-    // Send the request
-    const response = await fetch(url, options);
+    try {
+      const response = await fetch(url, options);
+      const data = await response.json();
   
-    // request successful
-    if (!response.ok) {
-      const message = `An error has occurred: ${response.status}`;
-      throw new Error(message);
+      if (response.ok) {
+        if (isLogin) {
+          // store the token in local storage
+          localStorage.setItem("token", data.token);
+          localStorage.setItem("username", data.user.username);
+          // redirect to the home page
+          navigate("/");  
+          console.log(data);
+        } else {
+          // After successful registration, show a message and redirect to the login form
+          toast.success("Registration successful! Please log in.");
+          setIsLogin(true); // Switch to the login form
+          console.log(data);
+        }
+      } else {
+        // Handle server response errors (e.g., invalid credentials or existing user)
+        toast.warning(data.detail || "User with this username or email already exists");
+      }
+    } catch (error) {
+      // Handle network errors
+      toast.error("Network error: Could not connect to the server.");
     }
-  
-    const data = await response.json();
-
-    if (isLogin) {
-      // store the token in the local storage
-      localStorage.setItem("token", data.token);
-      // redirect to the home page
-      navigate("/");
-    }
-
-    console.log(data);
   };
 
   return (
@@ -74,7 +79,17 @@ function AuthForm() {
     <h1 className="login-title">{isLogin ? "Log in" : "Sign up"}</h1>
       {!isLogin && (
         <div className="login-form">
-          <label htmlFor="password">Username</label>
+          <label htmlFor="email">Email</label>
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={formState.email}
+            onChange={handleInputChange}
+          />
+        </div>
+      )}
+      <label htmlFor="password">Username</label>
           <input
             className="auth-input"
             name="username"
@@ -83,16 +98,6 @@ function AuthForm() {
             value={formState.username}
             onChange={handleInputChange}
           />
-        </div>
-      )}
-      <label htmlFor="email">Email</label>
-      <input
-        name="email"
-        type="email"
-        placeholder="Email"
-        value={formState.email}
-        onChange={handleInputChange}
-      />
       <label htmlFor="password">Password</label>
       <input
         name="password"
