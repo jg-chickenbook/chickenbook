@@ -75,43 +75,43 @@ function AuthForm() {
 
   return (
     <div className="login-form">
-    <form onSubmit={handleSubmit}>
-    <h1 className="login-title">{isLogin ? "Log in" : "Sign up"}</h1>
-      {!isLogin && (
-        <div className="login-form">
-          <label htmlFor="email">Email</label>
-          <input
-            name="email"
-            type="email"
-            placeholder="Email"
-            value={formState.email}
-            onChange={handleInputChange}
-          />
-        </div>
-      )}
-      <label htmlFor="password">Username</label>
-          <input
-            className="auth-input"
-            name="username"
-            type="text"
-            placeholder="Username"
-            value={formState.username}
-            onChange={handleInputChange}
-          />
-      <label htmlFor="password">Password</label>
-      <input
-        name="password"
-        type="password"
-        placeholder="Password"
-        value={formState.password}
-        onChange={handleInputChange}
-      />
-      <button className="button__primary" type="submit">{isLogin ? "Login" : "Sign Up"}</button>
-      <a className="login-link" href="" onClick={toggleForm}>
-        {isLogin ? "Need an account? Sign Up" : "Already have an account? Login"}
-      </a>
-    </form>
-     <ButtonBack />
+      <form onSubmit={handleSubmit}>
+      <h1 className="login-title">{isLogin ? "Log in" : "Sign up"}</h1>
+        {!isLogin && (
+          <div className="login-form">
+            <label htmlFor="email">Email</label>
+            <input
+              name="email"
+              type="email"
+              placeholder="Email"
+              value={formState.email}
+              onChange={handleInputChange}
+            />
+          </div>
+        )}
+        <label htmlFor="password">Username</label>
+            <input
+              className="auth-input"
+              name="username"
+              type="text"
+              placeholder="Username"
+              value={formState.username}
+              onChange={handleInputChange}
+            />
+        <label htmlFor="password">Password</label>
+        <input
+          name="password"
+          type="password"
+          placeholder="Password"
+          value={formState.password}
+          onChange={handleInputChange}
+        />
+        <button className="button__primary" type="submit">{isLogin ? "Login" : "Sign Up"}</button>
+        <a className="login-link" href="" onClick={toggleForm}>
+          {isLogin ? "Need an account? Sign Up" : "Already have an account? Login"}
+        </a>
+      </form>
+      <ButtonBack />
      </div>
   );
 }
