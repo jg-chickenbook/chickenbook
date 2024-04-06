@@ -1,7 +1,7 @@
 import React from "react";
 
 const EditProfileForm = ({
-  member,
+  member = {},
   onSave,
   onSkillChange,
   onProjectChange,
@@ -10,8 +10,7 @@ const EditProfileForm = ({
   addProject,
   removeProject
 }) => {
-  // const { name, email, phone, about, mainSkills, bestProjects } = member;
-  const { name,mainSkills, bestProjects } = member;
+  const { name, mainSkills = [], bestProjects = [] } = member;
 
   return (
     <form onSubmit={onSave}>
