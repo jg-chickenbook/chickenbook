@@ -1,0 +1,31 @@
+@import './_variables.scss';
+
+.profile__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  position: absolute;
+  top: 80%; 
+  right: 13%; 
+  z-index: 1;
+  width: 180px; 
+  height: 150px;
+  padding: 10px;
+  border: 2px solid $color-secondary;
+  border-radius: 5px;
+  background-color: $color-primary-200;
+  box-shadow: 8px 10px $color-secondary;
+  
+  .profile-menu__link {
+    color: $color-text;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+}
+
