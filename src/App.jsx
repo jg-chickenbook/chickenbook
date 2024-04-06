@@ -3,6 +3,7 @@ import { RouterProvider, createHashRouter } from "react-router-dom";
 import Homepage from "./pages/homepage/Homepage";
 import Detail from "./pages/detail/Detail";
 import LogInPage from "./pages/login/LogInPage";
+import EditDetail from "./pages/detail/EditDetail";
 import "./style/main.scss";
 
 import { Toaster } from "sonner";
@@ -22,6 +23,10 @@ export default function App() {
     {
       path: "/login",
       element: <LogInPage />,
+    },
+    {
+      path: "/edit",
+      element: <EditDetail />,
     }
   ]);
 
