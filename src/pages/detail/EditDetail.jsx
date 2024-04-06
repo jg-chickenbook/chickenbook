@@ -1,4 +1,6 @@
 import React from "react";
+import ButtonBack from "./ButtonBack";
+import CardView from "./CardView";
 
 const EditProfileForm = ({
   member = {},
@@ -13,6 +15,7 @@ const EditProfileForm = ({
   const { name, mainSkills = [], bestProjects = [] } = member;
 
   return (
+    <CardView>
     <form onSubmit={onSave}>
       <label>
         Name:
@@ -56,6 +59,8 @@ const EditProfileForm = ({
       </div>
       <button type="submit">Save Changes</button>
     </form>
+    <ButtonBack />
+    </CardView>
   );
 };
 
