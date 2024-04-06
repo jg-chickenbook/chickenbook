@@ -90,20 +90,17 @@ export default function Homepage() {
         <h1 className="main__title">Chickenbook</h1>
         <SearchBox searchChange={onSearchChange} />
         {isLoggedIn ? (
-          <div className="user__box">
-            <span className="nav__username" onClick={handleProfileMenuClick}>
-              Welcome, {username}
-            </span>
-            {showProfileMenu && <ProfileMenu />}
-            <Link className="nav__link" onClick={handleLogout}>
-              Log Out
+            <div className="user__box">
+              <span className="nav__username" onClick={handleProfileMenuClick}>
+                Welcome, {username}
+              </span>
+              {showProfileMenu && <ProfileMenu handleLogout={handleLogout} />} {/* Pass handleLogout as a prop */}
+            </div>
+          ) : (
+            <Link className="nav__link" to="/login">
+              Log In
             </Link>
-          </div>
-        ) : (
-          <Link className="nav__link" to="/login">
-            Log In
-          </Link>
-        )}
+          )}
       </header>
       <main>
         <ScrollView>

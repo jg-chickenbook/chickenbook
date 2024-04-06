@@ -1,4 +1,4 @@
-import JgChicken from "../../assets/jg-chicken.png";
+import JgChicken from "../../assets/chick-chicko.png";
 
 const Header = ({ name, headline, status }) => {
 

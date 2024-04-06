@@ -8,11 +8,11 @@
   gap: 1.5rem;
   position: absolute;
   top: 80%; 
-  right: 13%; 
+  right: 2%; 
   z-index: 1;
-  width: 180px; 
-  height: 150px;
-  padding: 10px;
+  width: 200px; 
+  height: 250px;
+  padding: 10px 0px 10px 10px;
   border: 2px solid $color-secondary;
   border-radius: 5px;
   background-color: $color-primary-200;
@@ -21,7 +21,7 @@
   .profile-menu__link {
     color: $color-text;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     &:hover {
       color: $link-color-hover;
