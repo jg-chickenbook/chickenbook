@@ -5,6 +5,7 @@ import SearchBox from "./SearchBox";
 import { members as membersDummyList } from "../../data/members";
 import ScrollView from "./ScrollView";
 import "../login/LogInForm";
+import ProfileMenu from "./ProfileMenu";
 import { Link } from "react-router-dom";
 
 import { toast } from "sonner";
@@ -77,6 +78,12 @@ export default function Homepage() {
     }
   };
 
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
+
+  const handleProfileMenuClick = () => {
+    setShowProfileMenu(!showProfileMenu);
+  };
+
   return (
     <>
       <header className="header">
@@ -84,11 +91,18 @@ export default function Homepage() {
         <SearchBox searchChange={onSearchChange} />
         {isLoggedIn ? (
           <div className="user__box">
-            <span className="nav__username">Welcome, {username}  </span>
-            <Link className="nav__link" onClick={handleLogout}>Log Out</Link>
+            <span className="nav__username" onClick={handleProfileMenuClick}>
+              Welcome, {username}
+            </span>
+            {showProfileMenu && <ProfileMenu />}
+            <Link className="nav__link" onClick={handleLogout}>
+              Log Out
+            </Link>
           </div>
         ) : (
-          <Link className="nav__link" to="/login">Log In</Link>
+          <Link className="nav__link" to="/login">
+            Log In
+          </Link>
         )}
       </header>
       <main>
