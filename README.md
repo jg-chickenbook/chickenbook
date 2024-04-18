@@ -6,7 +6,11 @@ My goal is to create an app where members of Junior Guru[^1] can log in and crea
 
 [^1]: Czechoslovakian developer community
 
-## Collaboration
+## 🏁 Quick Start
+
+> Will be added after migration to Vite if we agree on it
+
+## 🤝 Collaboration
 
 `ISSUE` ➡️ `BRANCH` ➡️ `COMMITS` & `PUSHES` ➡️ `PULL REQUEST` ➡️ `CODE REVIEW` ➡️ `MERGE into DEV`
 
@@ -38,7 +42,6 @@ feature = branch category
 30 = number of issue 
 the rest = the branch title
 ```
-If there are more people working on one issue you can consider adding initials.
 
 ### ➕ Commits
 - Commit small changes separately. More commits are better than few. 
@@ -47,11 +50,7 @@ If there are more people working on one issue you can consider adding initials.
 
 ### 🙏 Pull requests
 
-Pull requests should target the `dev` branch (set `base: dev` and `compare: <your-branch>`). 
-
-> ?? regular deployments and refactoring ??
-
-Any change that is going to be merged should be checked by at least one other developer. Therefore **add others as reviewers in your pull request** so they get a notification that you need them to check it out. **Branch shouldn't be merged without a code review and/or some feedback written in the pull request**. Comments or at least reactions are required in PRs and **all the PR related communication should happen within the given PR** or be at least noticed/mentioned including its outcome.
+Pull requests should target the `dev` branch (set `base: dev` and `compare: <your-branch>`). Any change that is going to be merged should be checked by at least one other developer. Therefore **add others as reviewers in your pull request** so they get a notification that you need them to check it out. **Branch shouldn't be merged without a code review and/or some feedback written in the pull request**. Comments or at least reactions are required in PRs and **all the PR related communication should happen within the given PR** or be at least noticed/mentioned including its outcome.
 
 Each pull requests should contain at least basic information about the changes. You can use this simple template:
 
@@ -75,6 +74,5 @@ Each pull requests should contain at least basic information about the changes. 
 | `data`        | For storing our data assets such as JSON files, can also store global constant variables |
 | `components`  | For placing any layout based components, like a sidebar, navbar, container, etc. |
 | `hooks`       | Contains every single custom hook               |
-| `pages`       | Contains one folder for each page in your application, and each page folder contains folders and files that are only ever used in the given page |
-| `style`       | There are all the SCSS style files               |
+| `pages`       | Contains one folder for each page in your application, and each page folder contains folders and files that are only ever used in the given page |            |
 | `utils`       | Storing all utility functions such as formatters |
