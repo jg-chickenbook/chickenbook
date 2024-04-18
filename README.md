@@ -76,3 +76,9 @@ Each pull requests should contain at least basic information about the changes. 
 | `hooks`       | Contains every single custom hook               |
 | `pages`       | Contains one folder for each page in your application, and each page folder contains folders and files that are only ever used in the given page |            |
 | `utils`       | Storing all utility functions such as formatters |
+
+### ⚙️ Recommended VS Code Extensions
+- [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize)
