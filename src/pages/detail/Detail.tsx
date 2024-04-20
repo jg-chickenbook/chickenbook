@@ -14,21 +14,21 @@ export default function Detail() {
   useEffect(() => {
     const findMember = membersDummyList.find((member) => member.id == parseInt(id as string));
     if (findMember) {
-      setMember(findMember)
+      setMember(findMember);
     } else {
-      setMember(null)
+      setMember(null);
     }
   }, [id]);
 
   if (!member) {
-     return <div>Loading...</div>;
-   }
+    return <div>Loading...</div>;
+  }
 
   const skills = member.mainSkills.map((skill, key) => <li key={ key }>{ skill }</li>);
 
   const projects = member.bestProjects.map((project, key) => (
     <li key={ key }>
-       <a href={ project.link }>{ project.name }</a>
+      <a href={ project.link }>{ project.name }</a>
     </li>
   ));
 

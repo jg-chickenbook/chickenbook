@@ -1,4 +1,3 @@
-
 type CardViewProps = {
   children: React.ReactNode;
 };

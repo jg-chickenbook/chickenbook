@@ -13,6 +13,6 @@ const SearchBox = ({ searchChange }: SearchBoxProps) => {
     </>
 
   );
-}
+};
 
 export default SearchBox;

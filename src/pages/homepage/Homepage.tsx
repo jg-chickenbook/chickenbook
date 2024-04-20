@@ -42,12 +42,12 @@ export default function Homepage() {
 
     // Check if the token exists
     if (!token) {
-        toast.error("No token found");
+      toast.error("No token found");
       return;
     }
 
     // Prepare the request options
-    const url = "http://127.0.0.1:8000/api/accounts/logout"
+    const url = "http://127.0.0.1:8000/api/accounts/logout";
 
     const requestOptions = {
       method: "POST",
@@ -92,17 +92,17 @@ export default function Homepage() {
         <h1 className="main__title">Chickenbook</h1>
         <SearchBox searchChange={onSearchChange} />
         {isLoggedIn ? (
-            <div className="user__box">
-              <span className="nav__username" onClick={handleProfileMenuClick}>
+          <div className="user__box">
+            <span className="nav__username" onClick={handleProfileMenuClick}>
                 Welcome, {username}
-              </span>
-              {showProfileMenu && <ProfileMenu handleLogout={handleLogout} />} {/* Pass handleLogout as a prop */}
-            </div>
-          ) : (
-            <Link className="nav__link" to="/login">
+            </span>
+            {showProfileMenu && <ProfileMenu handleLogout={handleLogout} />} {/* Pass handleLogout as a prop */}
+          </div>
+        ) : (
+          <Link className="nav__link" to="/login">
               Log In
-            </Link>
-          )}
+          </Link>
+        )}
       </header>
       <main>
         <ScrollView>

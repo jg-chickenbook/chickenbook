@@ -33,7 +33,7 @@ function App() {
       <RouterProvider router={ router } />
       <Toaster richColors expand={true} />
     </>
-  )
+  );
 }
 
 export default App;

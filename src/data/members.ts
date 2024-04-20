@@ -9,7 +9,7 @@ export type Member = {
   email: string;
   about: string;
 
-}
+};
 
 export const members: Member[] = [
   {
@@ -240,4 +240,4 @@ export const members: Member[] = [
     email: "zuzana.svestkova@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti."
   }
-]
+];
