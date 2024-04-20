@@ -1,8 +1,8 @@
 import { RouterProvider, createHashRouter } from "react-router-dom";
-import Homepage from "./pages/homepage/Homepage";
-import Detail from "./pages/detail/Detail";
-import LogInPage from "./pages/login/LogInPage";
-import EditDetail from "./pages/detail/EditDetail.tsx";
+import Homepage from "./pages/homepage/Homepage.tsx";
+import Detail from "./pages/detail/Detail.tsx";
+import LogInPage from "./pages/login/LogInPage.tsx";
+// import EditDetail from "./pages/detail/EditDetail.tsx";
 import "./style/main.scss";
 
 import { Toaster } from "sonner";
@@ -20,10 +20,10 @@ const router = createHashRouter([
     path: "/login",
     element: <LogInPage />,
   },
-  {
-    path: "/edit",
-    element: <EditDetail />,
-  }
+  // {
+  //   path: "/edit",
+  //   element: <EditDetail />,
+  // }
 ]);
 
 function App() {
