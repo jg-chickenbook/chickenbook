@@ -1,0 +1,22 @@
+@import 'variables';
+
+html {
+  height: 100dvh;
+}
+
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $color-primary;
+  height: 100%;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
