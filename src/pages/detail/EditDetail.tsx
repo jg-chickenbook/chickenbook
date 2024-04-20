@@ -1,9 +1,31 @@
-import React from "react";
 import ButtonBack from "./ButtonBack";
 import CardView from "./CardView";
 
+type EditProfileFormProps = {
+  member?: {
+    name: string;
+    mainSkills: string[];
+    bestProjects: {
+      name: string;
+      link: string;
+    }[];
+  };
+  onSave: (e: React.FormEvent) => void;
+  onSkillChange: (index: number | string, value: string) => void;
+  onProjectChange: (index: number, key: string, value: string) => void;
+  addSkill: () => void;
+  removeSkill: (index: number) => void;
+  addProject: () => void;
+  removeProject: (index: number) => void;
+
+};
+
 const EditProfileForm = ({
-  member = {},
+  member = {
+    name: "",
+    mainSkills: [],
+    bestProjects: []
+  },
   onSave,
   onSkillChange,
   onProjectChange,
@@ -11,7 +33,7 @@ const EditProfileForm = ({
   removeSkill,
   addProject,
   removeProject
-}) => {
+}: EditProfileFormProps) => {
   const { name, mainSkills = [], bestProjects = [] } = member;
 
   return (

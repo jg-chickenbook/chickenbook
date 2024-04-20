@@ -5,17 +5,18 @@ import CardView from "./CardView";
 import Header from "./Header";
 import BubbleContainer from "./bubbles/BubbleContainer";
 import ButtonBack from "./ButtonBack";
+import { Member } from "../../data/members";
 
 export default function Detail() {
   const { id } = useParams();
-  const [member, setMember] = useState(null);
+  const [member, setMember] = useState<Member | null>(null);
 
   useEffect(() => {
-    const findMember = membersDummyList.find((member) => member.id == parseInt(id));
+    const findMember = membersDummyList.find((member) => member.id == parseInt(id as string));
     if (findMember) {
       setMember(findMember)
-      } else {
-        setMember(null)
+    } else {
+      setMember(null)
     }
   }, [id]);
 
