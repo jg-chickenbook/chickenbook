@@ -1,4 +1,17 @@
-export const members = [
+type Member = {
+  id: number;
+  status: string;
+  name: string;
+  headline: string;
+  mainSkills: string[];
+  bestProjects: {name: string, link: string}[];
+  phone: string;
+  email: string;
+  about: string;
+
+}
+
+export const members: Member[] = [
   {
     id: 1,
     status: "Employed",
