@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import CardList from "./cards/CardList";
 import SearchBox from "./SearchBox";
-import { members as membersDummyList } from "../../data/members";
+import { Member, members as membersDummyList } from "../../data/members";
 import ScrollView from "./ScrollView";
 import "../login/LogInForm";
 import ProfileMenu from "./ProfileMenu";
@@ -12,7 +12,7 @@ import { toast } from "sonner";
 
 
 export default function Homepage() {
-  const [members, setMembers] = useState([]);
+  const [members, setMembers] = useState<Member[]>([]);
   const [searchfield, setSearchfield] = useState("");
 
   const navigate = useNavigate(); // For navigating after logout
@@ -25,7 +25,7 @@ export default function Homepage() {
     setMembers(membersDummyList);
   }, []);
 
-  const onSearchChange = (event) => {
+  const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchfield(event.target.value);
   };
 
@@ -74,7 +74,9 @@ export default function Homepage() {
       // Redirect to the login page or refresh the homepage
       navigate("/login");
     } catch (error) {
-      toast.error(error.message);
+      if (error instanceof Error) {
+        toast.error(error.message);
+      }
     }
   };
 
