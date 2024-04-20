@@ -1,7 +1,30 @@
-# 🐤 Chickenbook
+# React + TypeScript + Vite
 
-My goal is to create an app where members of Junior Guru[^1] can log in and create a simple developer profile they can show to the world. Anybody will be able to browse the profiles. There will be filters to view them according to a specific field, programming language and so on. Theoretically, companies might use such a database when looking for junior developers, as well as people looking for collaborators for their projects.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-**Why Chickenbook?** Junior Guru has a chicken, more precisely a chick, in its logo, and there is also a chick/chicken bot on the community's Discord server. Chick would be more precise, but I thought Chickbook might be misleading 😅, so I decided on Chickenbook instead.
+Currently, two official plugins are available:
 
-[^1]: Czechoslovakian developer community
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+- Configure the top-level `parserOptions` property like this:
+
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
+
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
