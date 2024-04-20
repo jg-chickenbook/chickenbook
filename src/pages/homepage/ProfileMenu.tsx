@@ -1,13 +1,16 @@
-// import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../style/_profile-menu.scss";
 import "../../style/_buttons.scss";
 
-function ProfileMenu(props) {
+type ProfileMenuProps = {
+  handleLogout: () => void;
+};
+
+function ProfileMenu(props: ProfileMenuProps) {
   const navigate = useNavigate();
 
-  const handleNavigation = (path) => {
+  const handleNavigation = (path: string) => {
     navigate(path);
   };
 

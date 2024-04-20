@@ -1,6 +1,12 @@
 import JgChicken from "../../assets/chick-chicko.png";
 
-const Header = ({ name, headline, status }) => {
+type HeaderProps = {
+  name: string;
+  headline: string;
+  status: string;
+};
+
+const Header = ({ name, headline, status }: HeaderProps) => {
 
   return (
     <header className="header__detail">

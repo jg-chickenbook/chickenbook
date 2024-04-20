@@ -1,6 +1,8 @@
-import React from "react";
+type ScrollViewProps = {
+  children: React.ReactNode;
+};
 
-const ScrollView = (props) => {
+const ScrollView = (props: ScrollViewProps) => {
   return (
     <section className="main__section">
       { props.children }

@@ -1,7 +1,15 @@
-import Column from "../Column";
+import Column from "./Column";
 import InfoBubble from "./InfoBubble";
 
-const BubbleContainer = ({ skillsList, projectsList, email, phone, about }) => {
+type BubbleContainerProps = {
+  skillsList: React.ReactNode;
+  projectsList: React.ReactNode;
+  email: string;
+  phone: string;
+  about: string;
+};
+
+const BubbleContainer = ({ skillsList, projectsList, email, phone, about }: BubbleContainerProps) => {
 
   return (
     <section className="bubbles__container">

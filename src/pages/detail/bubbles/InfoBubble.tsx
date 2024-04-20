@@ -1,4 +1,9 @@
-const InfoBubble = ({ title, ...props }) => {
+type InfoBubbleProps = {
+  title: string;
+  children: React.ReactNode;
+};
+
+const InfoBubble = ({ title, ...props }: InfoBubbleProps) => {
 
   return (
     <fieldset className="detail__fieldset">

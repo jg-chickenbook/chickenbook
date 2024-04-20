@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../style/_login-form.scss";
 import ButtonBack from "../detail/ButtonBack";
 import { useNavigate } from "react-router-dom";
@@ -13,7 +13,7 @@ function AuthForm() {
     username: "" 
   });
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormState((prevState) => ({
       ...prevState,
@@ -21,14 +21,14 @@ function AuthForm() {
     }));
   };
 
-  const toggleForm = (event) => {
+  const toggleForm = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     event.preventDefault();
     setIsLogin(!isLogin);
   };
 
   const navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
   
     // validation
@@ -76,7 +76,7 @@ function AuthForm() {
   return (
     <div className="login-form">
       <form onSubmit={handleSubmit}>
-      <h1 className="login-title">{isLogin ? "Log in" : "Sign up"}</h1>
+        <h1 className="login-title">{isLogin ? "Log in" : "Sign up"}</h1>
         {!isLogin && (
           <div className="login-form">
             <label htmlFor="email">Email</label>
@@ -90,14 +90,14 @@ function AuthForm() {
           </div>
         )}
         <label htmlFor="password">Username</label>
-            <input
-              className="auth-input"
-              name="username"
-              type="text"
-              placeholder="Username"
-              value={formState.username}
-              onChange={handleInputChange}
-            />
+        <input
+          className="auth-input"
+          name="username"
+          type="text"
+          placeholder="Username"
+          value={formState.username}
+          onChange={handleInputChange}
+        />
         <label htmlFor="password">Password</label>
         <input
           name="password"
@@ -112,7 +112,7 @@ function AuthForm() {
         </a>
       </form>
       <ButtonBack />
-     </div>
+    </div>
   );
 }
 
