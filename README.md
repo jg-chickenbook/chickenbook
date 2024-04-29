@@ -28,6 +28,12 @@ npm run dev
 https://jg-chickenbook.github.io/chickenbook/
 ```
 
+## 🧑‍💻 Usage
+- You can currently see all the public profiles. 
+  - The profiles consist of "dummy data" for now.
+- A detailed profile can be displayed by clicking on the profile card.
+- It's also possible to register and log into the app.
+
 </br>
 </br>
 <details close><summary><b>🤝 Collaboration Guide</b></summary>
