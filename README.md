@@ -57,7 +57,7 @@ Each branch should be created from an issue and issues should ideally mirror tas
 
 The name of the branch should has the following format:
 
-`<branch-category>/<name-initials>-<issue-number>-<issue-name>`
+`<branch-category>/<issue-number>-<issue-name>`
 ```
 EXAMPLE: feature/30-profile-screen
 feature = branch category
