@@ -8,9 +8,31 @@ Our goal is to create an app where members of Junior Guru[^1] can log in and cre
 
 ## 🏁 Quick Start
 
-> Will be added after migration to Vite if we agree on it
+### Run the app locally
 
-## 🤝 Collaboration
+1. Clone the repository
+```
+git clone https://github.com/jg-chickenbook/chickenbook.git
+```
+2. Open the project and install dependencies
+```
+npm install
+```
+3. Run the app by using this command
+```
+npm run dev
+```
+
+### See the app deployed in GitHub pages
+```
+https://jg-chickenbook.github.io/chickenbook/
+```
+
+</br>
+</br>
+<details close><summary><b>🤝 Collaboration Guide</b></summary>
+</br>
+</br>
 
 `ISSUE` ➡️ `BRANCH` ➡️ `COMMITS` & `PUSHES` ➡️ `PULL REQUEST` ➡️ `CODE REVIEW` ➡️ `MERGE into DEV`
 
@@ -82,3 +104,5 @@ Each pull requests should contain at least basic information about the changes. 
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize)
+
+</details>
