@@ -23,6 +23,11 @@ npm install
 npm run dev
 ```
 
+4. The app will be ready at:
+```
+http://localhost:5173/chickenbook/
+```
+
 ### See the app deployed in GitHub pages
 ```
 https://jg-chickenbook.github.io/chickenbook/
