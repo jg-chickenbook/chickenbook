@@ -5,13 +5,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.5rem;
   position: absolute;
-  top: 80%; 
+  top: 90%; 
   right: 2%; 
   z-index: 1;
   width: 200px; 
-  height: 250px;
+  height: 150px;
   padding: 10px 0px 10px 10px;
   border: 2px solid $color-secondary;
   border-radius: 5px;
@@ -23,6 +23,8 @@
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
+    margin-top: 1rem;
+    transition: all .5s ease;
     &:hover {
       color: $link-color-hover;
     }

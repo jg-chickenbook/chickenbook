@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate, Link } from "react-router-dom"; // Import useNavigate
 import CardList from "./cards/CardList";
 import SearchBox from "./SearchBox";
 import { Member, members as membersDummyList } from "../../data/members";
 import ScrollView from "./ScrollView";
 import "../login/LogInForm";
 import ProfileMenu from "./ProfileMenu";
-import { Link } from "react-router-dom";
+import avatar from "../../assets/newchick.png";
 
 import { toast } from "sonner";
 
@@ -19,7 +19,7 @@ export default function Homepage() {
 
   // Check for user token or username in local storage
   const isLoggedIn = localStorage.getItem("token");
-  const username = localStorage.getItem("username");
+  //const username = localStorage.getItem("username");
 
   useEffect(() => {
     setMembers(membersDummyList);
@@ -93,9 +93,12 @@ export default function Homepage() {
         <SearchBox searchChange={onSearchChange} />
         {isLoggedIn ? (
           <div className="user__box">
-            <span className="nav__username" onClick={handleProfileMenuClick}>
-                Welcome, {username}
-            </span>
+            <img
+              className="nav__avatar"
+              src={avatar}
+              alt="User avatar"
+              onClick={handleProfileMenuClick}
+            />
             {showProfileMenu && <ProfileMenu handleLogout={handleLogout} />} {/* Pass handleLogout as a prop */}
           </div>
         ) : (
