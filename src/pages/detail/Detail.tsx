@@ -6,18 +6,15 @@ import ButtonBack from "./ButtonBack";
 import { Profile } from "../../data/ProfileType";
 import useFetchData from "../../hooks/useFetchData";
 import apiConfig from "../../apiConfig";
+import chicken from "../../assets/chick-chicko.png";
 
 export default function Detail() {
   const { id } = useParams();
   const { data: profile, loading, error } = useFetchData<Profile>(apiConfig.individualProfileUrl(id!));
 
-  if (!profile) {
-    return <div>Loading...</div>;
-  }
+  const skills = profile?.skills.map((skill, key) => <li key={ key }>{ skill }</li>);
 
-  const skills = profile.skills.map((skill, key) => <li key={ key }>{ skill }</li>);
-
-  const projects = profile.projects.map((project, key) => (
+  const projects = profile?.projects.map((project, key) => (
     <li key={ key }>
       <a href={ project.link }>{ project.name }</a>
     </li>
@@ -27,18 +24,18 @@ export default function Detail() {
     <>
       {loading ? <div>Loading...</div> : error ? <div>Error: {error}</div> :
         (<CardView>
-          <Header key={ profile._id }
-            name={ profile.name }
-            headline={ profile.headline }
-            status={ profile.status }
-            profilePic={ profile.profilePic }
+          <Header key={ profile?._id }
+            name={ profile?.name || "No name" }
+            headline={ profile?.headline || "No headline"}
+            status={ profile?.status || "No status" }
+            profilePic={ profile?.profilePic || chicken }
           />
           <BubbleContainer
             skillsList={ skills }
             projectsList={ projects }
-            email={ profile.email }
-            phone={ profile.phone }
-            about={ profile.about }
+            email={ profile?.email || "No email" }
+            phone={ profile?.phone || "No phone" }
+            about={ profile?.about || "No about text" }
           />
         </CardView>)}
       <ButtonBack />
