@@ -8,4 +8,5 @@ export type Profile = {
   phone: string;
   email: string;
   about: string;
+  profilePic: string;
 };

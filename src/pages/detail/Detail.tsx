@@ -31,6 +31,7 @@ export default function Detail() {
             name={ profile.name }
             headline={ profile.headline }
             status={ profile.status }
+            profilePic={ profile.profilePic }
           />
           <BubbleContainer
             skillsList={ skills }
