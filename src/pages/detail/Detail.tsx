@@ -5,12 +5,11 @@ import BubbleContainer from "./bubbles/BubbleContainer";
 import ButtonBack from "./ButtonBack";
 import { Profile } from "../../data/ProfileType";
 import useFetchData from "../../hooks/useFetchData";
-import apiConfig from "../../apiConfig";
 import chicken from "../../assets/chick-chicko.png";
 
 export default function Detail() {
   const { id } = useParams();
-  const { data: profile, loading, error } = useFetchData<Profile>(apiConfig.individualProfileUrl(id!));
+  const { data: profile, loading, error } = useFetchData<Profile>(`profiles/${id}`);
 
   const skills = profile?.skills.map((skill, key) => <li key={ key }>{ skill }</li>);
 

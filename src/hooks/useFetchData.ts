@@ -12,10 +12,11 @@ type FetchReturnType<T> = {
  * Example implementation:
  * - const { data: profiles, loading, error } = useFetchData<Profile[]>(apiConfig.allProfilesUrl);
  * @template T - The type of data to be fetched.
- * @param {string} url - The URL to fetch the data from.
+ * @param {string} url - The endpoint used to fetch data, e.g. "profiles" for fetching all profiles
  * @returns {FetchReturnType<T>} - An object containing the fetched data, loading state, and error message.
  */
-const useFetchData = <T>(url: string): FetchReturnType<T> => {
+const useFetchData = <T>(endpoint: string): FetchReturnType<T> => {
+  const url = `http://localhost:3000/api/${endpoint}`;
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);

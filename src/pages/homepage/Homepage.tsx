@@ -10,10 +10,9 @@ import { Link } from "react-router-dom";
 
 import { toast } from "sonner";
 import useFetchData from "../../hooks/useFetchData";
-import apiConfig from "../../apiConfig";
 
 export default function Homepage() {
-  const { data: profiles, loading, error } = useFetchData<Profile[]>(apiConfig.allProfilesUrl);
+  const { data: profiles, loading, error } = useFetchData<Profile[]>("profiles");
   const [searchfield, setSearchfield] = useState("");
 
   const navigate = useNavigate(); // For navigating after logout
