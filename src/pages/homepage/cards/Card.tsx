@@ -4,7 +4,7 @@ import ToDetailButton from "./ToDetailButton";
 
 type CardProps = {
   member: {
-    id: number;
+    _id: number;
     name: string;
     headline: string;
     status: string;
@@ -16,7 +16,7 @@ const Card = ({ member }: CardProps) => {
     <div className="card">
       <img className="card__image" alt="Profile image" src={ chicken } />
       <CardInfo member={ member } />
-      <ToDetailButton key={ member.id } member={ member } />
+      <ToDetailButton key={ member._id } member={ member } />
     </div>
   );
 };

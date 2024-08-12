@@ -2,12 +2,12 @@ import Card from "./Card";
 
 type CardListProps = {
   members: {
-    id: number;
+    _id: number;
     name: string;
     headline: string;
     status: string;
-    mainSkills: string[];
-    bestProjects: {
+    skills: string[];
+    projects: {
       name: string;
       link: string;
     }[];
@@ -16,7 +16,7 @@ type CardListProps = {
 
 const CardList = ({ members }: CardListProps) => {
   const cardGenerator = members.map((member) => {
-    return <Card member={ member } key={ member.id } />;
+    return <Card member={ member } key={ member._id } />;
   });
 
   return (

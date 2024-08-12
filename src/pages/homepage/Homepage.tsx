@@ -30,7 +30,7 @@ export default function Homepage() {
     return (
       member.name.toLowerCase().includes(searchfield.toLowerCase()) ||
       member.headline.toLowerCase().includes(searchfield.toLowerCase()) ||
-      member.mainSkills.join(" ").toLowerCase().includes(searchfield.toLowerCase())
+      member.skills.join(" ").toLowerCase().includes(searchfield.toLowerCase())
     );
   });
 
