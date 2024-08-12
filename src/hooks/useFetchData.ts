@@ -10,7 +10,7 @@ type FetchReturnType<T> = {
  * Custom hook for fetching data from a specified URL.
  * 
  * Example implementation:
- * - const { data: profiles, loading, error } = useFetchData<Profile[]>(apiConfig.allProfilesUrl);
+ * - const { data: profiles, loading, error } = useFetchData<Profile[]>("profiles");
  * @template T - The type of data to be fetched.
  * @param {string} url - The endpoint used to fetch data, e.g. "profiles" for fetching all profiles
  * @returns {FetchReturnType<T>} - An object containing the fetched data, loading state, and error message.
