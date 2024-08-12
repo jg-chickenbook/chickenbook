@@ -83,10 +83,6 @@ export default function Homepage() {
     setShowProfileMenu(!showProfileMenu);
   };
 
-  // Super simple loading/error handling
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-
   return (
     <>
       <header className="header">
@@ -106,9 +102,10 @@ export default function Homepage() {
         )}
       </header>
       <main>
-        <ScrollView>
-          <CardList members={filteredMembers || []} />
-        </ScrollView>
+        {loading ? <div>Loading...</div> : error ? <div>Error: {error}</div> :
+          ( <ScrollView>
+            <CardList members={filteredMembers || []} />
+          </ScrollView>)}
       </main>
     </>
   );
