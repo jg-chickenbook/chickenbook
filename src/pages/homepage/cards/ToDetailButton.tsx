@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 
 type ToDetailButtonProps = {
-  member: {
+  profile: {
     _id: number;
   };
 };
 
-const ToDetailButton = ({ member }: ToDetailButtonProps) => {
+const ToDetailButton = ({ profile }: ToDetailButtonProps) => {
   return (
-    <Link className="button__primary" to={ `/detail/${member._id}` } >
+    <Link className="button__primary" to={ `/detail/${profile._id}` } >
       More info
     </Link>
   );
 };
-
+ 
 export default ToDetailButton;

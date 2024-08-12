@@ -2,7 +2,7 @@ import ButtonBack from "./ButtonBack";
 import CardView from "./CardView";
 
 type EditProfileFormProps = {
-  member?: {
+  profile?: {
     name: string;
     mainSkills: string[];
     bestProjects: {
@@ -21,7 +21,7 @@ type EditProfileFormProps = {
 };
 
 const EditProfileForm = ({
-  member = {
+  profile = {
     name: "",
     mainSkills: [],
     bestProjects: []
@@ -34,7 +34,7 @@ const EditProfileForm = ({
   addProject,
   removeProject
 }: EditProfileFormProps) => {
-  const { name, mainSkills = [], bestProjects = [] } = member;
+  const { name, mainSkills = [], bestProjects = [] } = profile;
 
   return (
     <CardView>

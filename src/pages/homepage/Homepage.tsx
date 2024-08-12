@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import CardList from "./cards/CardList";
 import SearchBox from "./SearchBox";
-import { Member } from "../../data/members";
+import { Profile } from "../../data/ProfileType";
 import ScrollView from "./ScrollView";
 import "../login/LogInForm";
 import ProfileMenu from "./ProfileMenu";
@@ -13,7 +13,7 @@ import useFetchData from "../../hooks/useFetchData";
 import apiConfig from "../../apiConfig";
 
 export default function Homepage() {
-  const { data: members, loading, error } = useFetchData<Member[]>(apiConfig.allProfilesUrl);
+  const { data: profiles, loading, error } = useFetchData<Profile[]>(apiConfig.allProfilesUrl);
   const [searchfield, setSearchfield] = useState("");
 
   const navigate = useNavigate(); // For navigating after logout
@@ -26,11 +26,11 @@ export default function Homepage() {
     setSearchfield(event.target.value);
   };
 
-  const filteredMembers = members?.filter((member) => {
+  const filterProfiles = profiles?.filter((profile) => {
     return (
-      member.name.toLowerCase().includes(searchfield.toLowerCase()) ||
-      member.headline.toLowerCase().includes(searchfield.toLowerCase()) ||
-      member.skills.join(" ").toLowerCase().includes(searchfield.toLowerCase())
+      profile.name.toLowerCase().includes(searchfield.toLowerCase()) ||
+      profile.headline.toLowerCase().includes(searchfield.toLowerCase()) ||
+      profile.skills.join(" ").toLowerCase().includes(searchfield.toLowerCase())
     );
   });
 
@@ -104,7 +104,7 @@ export default function Homepage() {
       <main>
         {loading ? <div>Loading...</div> : error ? <div>Error: {error}</div> :
           ( <ScrollView>
-            <CardList members={filteredMembers || []} />
+            <CardList profiles={filterProfiles || []} />
           </ScrollView>)}
       </main>
     </>

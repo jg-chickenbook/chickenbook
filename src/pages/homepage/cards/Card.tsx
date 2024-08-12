@@ -3,7 +3,7 @@ import CardInfo from "./CardInfo";
 import ToDetailButton from "./ToDetailButton";
 
 type CardProps = {
-  member: {
+  profile: {
     _id: number;
     name: string;
     headline: string;
@@ -11,12 +11,12 @@ type CardProps = {
   };
 };
 
-const Card = ({ member }: CardProps) => {
+const Card = ({ profile }: CardProps) => {
   return (
     <div className="card">
       <img className="card__image" alt="Profile image" src={ chicken } />
-      <CardInfo member={ member } />
-      <ToDetailButton key={ member._id } member={ member } />
+      <CardInfo profile={ profile } />
+      <ToDetailButton key={ profile._id } profile={ profile } />
     </div>
   );
 };

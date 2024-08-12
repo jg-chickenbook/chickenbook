@@ -1,11 +1,11 @@
 export type Profile = {
-  user_id: number;
+  _id: number;
   status: string;
   name: string;
   headline: string;
-  skills: {name: string}[];
+  skills: string[];
   projects: {name: string, link: string}[];
-  phone_number: string;
+  phone: string;
   email: string;
   about: string;
 };
