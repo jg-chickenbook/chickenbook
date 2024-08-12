@@ -16,7 +16,7 @@ type FetchReturnType<T> = {
  * @returns {FetchReturnType<T>} - An object containing the fetched data, loading state, and error message.
  */
 const useFetchData = <T>(endpoint: string): FetchReturnType<T> => {
-  const url = `http://localhost:3000/api/${endpoint}`;
+  const url = `http://localhost:3000/api/${endpoint}`; // Loccalhost will be replaced with the actual URL
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
