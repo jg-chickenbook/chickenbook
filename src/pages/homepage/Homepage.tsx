@@ -1,18 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import CardList from "./cards/CardList";
 import SearchBox from "./SearchBox";
-import { Member, members as membersDummyList } from "../../data/members";
+import { Member } from "../../data/members";
 import ScrollView from "./ScrollView";
 import "../login/LogInForm";
 import ProfileMenu from "./ProfileMenu";
 import { Link } from "react-router-dom";
 
 import { toast } from "sonner";
-
+import useFetchData from "../../hooks/useFetchData";
+import apiConfig from "../../apiConfig";
 
 export default function Homepage() {
-  const [members, setMembers] = useState<Member[]>([]);
+  const { data: members, loading, error } = useFetchData<Member[]>(apiConfig.allProfilesUrl);
   const [searchfield, setSearchfield] = useState("");
 
   const navigate = useNavigate(); // For navigating after logout
@@ -21,15 +22,11 @@ export default function Homepage() {
   const isLoggedIn = localStorage.getItem("token");
   const username = localStorage.getItem("username");
 
-  useEffect(() => {
-    setMembers(membersDummyList);
-  }, []);
-
   const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchfield(event.target.value);
   };
 
-  const filteredMembers = members.filter((member) => {
+  const filteredMembers = members?.filter((member) => {
     return (
       member.name.toLowerCase().includes(searchfield.toLowerCase()) ||
       member.headline.toLowerCase().includes(searchfield.toLowerCase()) ||
@@ -86,6 +83,10 @@ export default function Homepage() {
     setShowProfileMenu(!showProfileMenu);
   };
 
+  // Super simple loading/error handling
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
   return (
     <>
       <header className="header">
@@ -106,7 +107,7 @@ export default function Homepage() {
       </header>
       <main>
         <ScrollView>
-          <CardList members={filteredMembers} />
+          <CardList members={filteredMembers || []} />
         </ScrollView>
       </main>
     </>
