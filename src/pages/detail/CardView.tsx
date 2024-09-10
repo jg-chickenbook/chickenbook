@@ -5,7 +5,7 @@ type CardViewProps = {
 const CardView = (props: CardViewProps) => {
   return (
     <div className="detail__container">
-      <div className="member__card">
+      <div className="profile__card">
         {props.children}
       </div>
     </div>

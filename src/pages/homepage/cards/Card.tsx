@@ -3,20 +3,20 @@ import CardInfo from "./CardInfo";
 import ToDetailButton from "./ToDetailButton";
 
 type CardProps = {
-  member: {
-    id: number;
+  profile: {
+    _id: number;
     name: string;
     headline: string;
     status: string;
   };
 };
 
-const Card = ({ member }: CardProps) => {
+const Card = ({ profile }: CardProps) => {
   return (
     <div className="card">
       <img className="card__image" alt="Profile image" src={ chicken } />
-      <CardInfo member={ member } />
-      <ToDetailButton key={ member.id } member={ member } />
+      <CardInfo profile={ profile } />
+      <ToDetailButton key={ profile._id } profile={ profile } />
     </div>
   );
 };

@@ -7,7 +7,7 @@ const SearchBox = ({ searchChange }: SearchBoxProps) => {
     <>
       <input className="search__input"
         type="search"
-        placeholder="Search members"
+        placeholder="Search profiles"
         onChange={searchChange}
       />
     </>
