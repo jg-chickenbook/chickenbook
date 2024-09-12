@@ -1,32 +1,19 @@
-import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { members as membersDummyList } from "../../data/members";
 import CardView from "./CardView";
 import Header from "./Header";
 import BubbleContainer from "./bubbles/BubbleContainer";
 import ButtonBack from "./ButtonBack";
-import { Member } from "../../data/members";
+import { Profile } from "../../data/ProfileType";
+import useFetchData from "../../hooks/useFetchData";
+import chicken from "../../assets/chick-chicko.png";
 
 export default function Detail() {
   const { id } = useParams();
-  const [member, setMember] = useState<Member | null>(null);
+  const { data: profile, loading, error } = useFetchData<Profile>(`profiles/${id}`);
 
-  useEffect(() => {
-    const findMember = membersDummyList.find((member) => member.id == parseInt(id as string));
-    if (findMember) {
-      setMember(findMember);
-    } else {
-      setMember(null);
-    }
-  }, [id]);
+  const skills = profile?.skills.map((skill, key) => <li key={ key }>{ skill }</li>);
 
-  if (!member) {
-    return <div>Loading...</div>;
-  }
-
-  const skills = member.mainSkills.map((skill, key) => <li key={ key }>{ skill }</li>);
-
-  const projects = member.bestProjects.map((project, key) => (
+  const projects = profile?.projects.map((project, key) => (
     <li key={ key }>
       <a href={ project.link }>{ project.name }</a>
     </li>
@@ -34,20 +21,22 @@ export default function Detail() {
 
   return (
     <>
-      <CardView>
-        <Header key={ member.id }
-          name={ member.name }
-          headline={ member.headline }
-          status={ member.status }
-        />
-        <BubbleContainer
-          skillsList={ skills }
-          projectsList={ projects }
-          email={ member.email }
-          phone={ member.phone }
-          about={ member.about }
-        />
-      </CardView>
+      {loading ? <div>Loading...</div> : error ? <div>Error: {error}</div> :
+        (<CardView>
+          <Header key={ profile?._id }
+            name={ profile?.name || "No name" }
+            headline={ profile?.headline || "No headline"}
+            status={ profile?.status || "No status" }
+            profilePic={ profile?.profilePic || chicken }
+          />
+          <BubbleContainer
+            skillsList={ skills }
+            projectsList={ projects }
+            email={ profile?.email || "No email" }
+            phone={ profile?.phone || "No phone" }
+            about={ profile?.about || "No about text" }
+          />
+        </CardView>)}
       <ButtonBack />
     </>
   );

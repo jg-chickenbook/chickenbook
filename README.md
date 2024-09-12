@@ -8,9 +8,42 @@ Our goal is to create an app where members of Junior Guru[^1] can log in and cre
 
 ## 🏁 Quick Start
 
-> Will be added after migration to Vite if we agree on it
+### Run the app locally
 
-## 🤝 Collaboration
+1. Clone the repository
+```
+git clone https://github.com/jg-chickenbook/chickenbook.git
+```
+2. Open the project and install dependencies
+```
+npm install
+```
+3. Run the app by using this command
+```
+npm run dev
+```
+
+4. The app will be ready at:
+```
+http://localhost:5173/chickenbook/
+```
+
+### See the app deployed in GitHub pages
+```
+https://jg-chickenbook.github.io/chickenbook/
+```
+
+## 🧑‍💻 Usage
+- You can currently see all the public profiles. 
+  - The profiles consist of "dummy data" for now.
+- A detailed profile can be displayed by clicking on the profile card.
+- It's also possible to register and log into the app.
+
+</br>
+</br>
+<details close><summary><b>🤝 Collaboration Guide</b></summary>
+</br>
+</br>
 
 `ISSUE` ➡️ `BRANCH` ➡️ `COMMITS` & `PUSHES` ➡️ `PULL REQUEST` ➡️ `CODE REVIEW` ➡️ `MERGE into DEV`
 
@@ -35,7 +68,7 @@ Each branch should be created from an issue and issues should ideally mirror tas
 
 The name of the branch should has the following format:
 
-`<branch-category>/<name-initials>-<issue-number>-<issue-name>`
+`<branch-category>/<issue-number>-<issue-name>`
 ```
 EXAMPLE: feature/30-profile-screen
 feature = branch category
@@ -82,3 +115,5 @@ Each pull requests should contain at least basic information about the changes. 
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize)
+
+</details>
