@@ -2,47 +2,17 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchBox from "../searchbox/SearchBox";
 import ProfileMenu from "../../pages/homepage/ProfileMenu";
-import { Member, members as membersDummyList } from "../../data/members";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { toast } from "sonner";
 import styled from "styled-components";
 
-export default function Header(props: { updateFilteredMembers: (members: Member[]) => void }) {
-
-  const [members, setMembers] = useState<Member[]>([]);
-
-
-  useEffect(() => {
-    setMembers(membersDummyList);
-  }, []);
-
-
-  const [searchfield, setSearchfield] = useState("");
-  const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchfield(event.target.value);
-  };
-
-  useEffect(() => {
-    const filteredMembers = members.filter((member) => {
-      return (
-        member.name.toLowerCase().includes(searchfield.toLowerCase()) ||
-        member.headline.toLowerCase().includes(searchfield.toLowerCase()) ||
-        member.mainSkills.join(" ").toLowerCase().includes(searchfield.toLowerCase())
-      );
-    });
-
-    if (props && props.updateFilteredMembers) {
-      props.updateFilteredMembers(filteredMembers);
-    }
-  }, [searchfield, members]);
-
+export default function Header(props: { onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void }) {
 
   const navigate = useNavigate(); // For navigating after logout
 
   // Check for user token or username in local storage
   const isLoggedIn = localStorage.getItem("token");
   const username = localStorage.getItem("username");
-
 
   const handleLogout = async () => {
     const token = localStorage.getItem("token");
@@ -58,7 +28,7 @@ export default function Header(props: { updateFilteredMembers: (members: Member[
 
     const requestOptions = {
       method: "POST",
-      headers: {
+      headers: { 
         "Content-Type": "application/json",
         "Authorization": `Token ${token}`, // Adjust according to your token type
       },
@@ -66,7 +36,7 @@ export default function Header(props: { updateFilteredMembers: (members: Member[
 
     try {
       const response = await fetch(url, requestOptions);
-
+      
       if (!response.ok) {
         throw new Error("Logout failed");
       }
@@ -96,7 +66,7 @@ export default function Header(props: { updateFilteredMembers: (members: Member[
   return (
     <StyledHeader>
         <StyledTitle>Chickenbook</StyledTitle>
-        <SearchBox searchChange={onSearchChange} />
+        <SearchBox searchChange={props.onSearchChange} />
         {isLoggedIn ? (
           <StyledUserBox>
             <StyledNavUsername onClick={handleProfileMenuClick}>
