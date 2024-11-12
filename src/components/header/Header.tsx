@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchBox from "../searchbox/SearchBox";
 import ProfileMenu from "../../pages/homepage/ProfileMenu";
@@ -8,14 +8,14 @@ import styled from "styled-components";
 
 interface HeaderProps {
   onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-}  
+}
 
-const Header = (props: HeaderProps) => {
+const HeaderComponent = (props: HeaderProps) => {
 
-  const { token: isLoggedIn, username } = {  
-    token: localStorage.getItem("token"),  
-    username: localStorage.getItem("username")  
-  };  
+  const { token: isLoggedIn, username } = {
+    token: localStorage.getItem("token"),
+    username: localStorage.getItem("username")
+  };
 
   const navigate = useNavigate(); // For navigating after logout
 
@@ -34,7 +34,7 @@ const Header = (props: HeaderProps) => {
 
     const requestOptions = {
       method: "POST",
-      headers: { 
+      headers: {
         "Content-Type": "application/json",
         "Authorization": `Token ${token}`, // Adjust according to your token type
       },
@@ -42,7 +42,7 @@ const Header = (props: HeaderProps) => {
 
     try {
       const response = await fetch(url, requestOptions);
-      
+
       if (!response.ok) {
         throw new Error("Logout failed");
       }
@@ -68,26 +68,26 @@ const Header = (props: HeaderProps) => {
   };
 
   return (
-    <StyledHeader>
-        <StyledTitle>Chickenbook</StyledTitle>
+    <Header>
+        <Title>Chickenbook</Title>
         <SearchBox searchChange={props.onSearchChange} />
         {isLoggedIn ? (
-          <StyledUserBox>
-            <StyledNavUsername onClick={handleProfileMenuClick}>
+          <UserBox>
+            <NavUsername onClick={handleProfileMenuClick}>
                 Welcome, {username}
-            </StyledNavUsername>
+            </NavUsername>
             {showProfileMenu && <ProfileMenu handleLogout={handleLogout} />} {/* Pass handleLogout as a prop */}
-          </StyledUserBox>
+          </UserBox>
         ) : (
-          <StyledLogIn className="nav__link" to="/login">
+          <LogIn className="nav__link" to="/login">
               Log In
-          </StyledLogIn>
+          </LogIn>
         )}
-      </StyledHeader>
+      </Header>
   );
 }
 
-const StyledHeader = styled.header`
+const Header = styled.header`
     position: sticky;
     top: 0;
     background-color: var(--color-primary);
@@ -108,7 +108,7 @@ const StyledHeader = styled.header`
     }
 `;
 
-const StyledLogIn = styled(Link)`
+const LogIn = styled(Link)`
 
     color: var(--color-text-900);
     font-size: 1.2rem;
@@ -133,7 +133,7 @@ const StyledLogIn = styled(Link)`
   }
 `;
 
-const StyledTitle = styled.h1`
+const Title = styled.h1`
   @media (max-width: 768px) {
    // order: 1;
    font-size: 1.5rem;
@@ -144,13 +144,13 @@ const StyledTitle = styled.h1`
   }
 `;
 
-const StyledUserBox = styled.div`
+const UserBox = styled.div`
   display: flex;
   align-items: center;
   gap: 3rem;
 `;
 
-const StyledNavUsername = styled.span`
+const NavUsername = styled.span`
   color: var(--color-text-900);
   font-size: 1.2rem;
   font-weight: 900;
@@ -162,4 +162,4 @@ const StyledNavUsername = styled.span`
   }
 `;
 
-export default Header;
+export default HeaderComponent;
