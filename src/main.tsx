@@ -5,7 +5,16 @@ import App from "./App.js";
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-    #root {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}    
+
+#root {
         width: 100%;
         height: 100%;
     }

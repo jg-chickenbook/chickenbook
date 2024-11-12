@@ -18,14 +18,18 @@ const SearchBox = ({ searchChange }: SearchBoxProps) => {
 };
 
 const StyledSearchBox = styled.input`
-  padding: 15px;
+  padding: 0.938rem;
   background-color: #FBFCD3;
   border-radius: 0.7rem;
-  border: 2px solid #191919;
+  border: 0.125rem solid #191919;
   outline: none;
-  margin-left: 10px;
+  margin-left: 0.625rem;
   &:focus {
     background-color: white;
+  }
+
+  @media (min-width: 992px) {
+    min-width: 20rem;
   }
 
   @media (max-width: 768px) {

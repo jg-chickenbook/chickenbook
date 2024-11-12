@@ -6,21 +6,27 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { toast } from "sonner";
 import styled from "styled-components";
 
-export default function Header(props: { onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void }) {
+interface HeaderProps {
+  onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}  
+
+const Header = (props: HeaderProps) => {
+
+  const { token: isLoggedIn, username } = {  
+    token: localStorage.getItem("token"),  
+    username: localStorage.getItem("username")  
+  };  
 
   const navigate = useNavigate(); // For navigating after logout
 
   // Check for user token or username in local storage
-  const isLoggedIn = localStorage.getItem("token");
-  const username = localStorage.getItem("username");
 
   const handleLogout = async () => {
     const token = localStorage.getItem("token");
 
     // Check if the token exists
     if (!token) {
-      toast.error("No token found");
-      return;
+      return toast.error("No token found");
     }
 
     // Prepare the request options
@@ -50,10 +56,8 @@ export default function Header(props: { onSearchChange: (event: React.ChangeEven
 
       // Redirect to the login page or refresh the homepage
       navigate("/login");
-    } catch (error) {
-      if (error instanceof Error) {
-        toast.error(error.message);
-      }
+    } catch (error: any) {
+        toast.error(error?.message || "An error occurred" );
     }
   };
 
@@ -157,3 +161,5 @@ const StyledNavUsername = styled.span`
     color: var(--link-color);
   }
 `;
+
+export default Header;
