@@ -6,15 +6,15 @@ type ScrollViewProps = {
 
 const ScrollView = (props: ScrollViewProps) => {
   return (
-    <StyledMainSection>
+    <MainSection>
       { props.children }
-    </StyledMainSection>
+    </MainSection>
   );
 };
 
 export default ScrollView;
 
-const StyledMainSection = styled.section`
+const MainSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

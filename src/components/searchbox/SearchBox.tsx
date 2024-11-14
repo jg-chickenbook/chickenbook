@@ -4,10 +4,10 @@ type SearchBoxProps = {
   searchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const SearchBox = ({ searchChange }: SearchBoxProps) => {
+const SearchBoxComponent = ({ searchChange }: SearchBoxProps) => {
   return (
     <>
-      <StyledSearchBox
+      <SearchBox
         type="search"
         placeholder="Search members"
         onChange={searchChange}
@@ -17,7 +17,7 @@ const SearchBox = ({ searchChange }: SearchBoxProps) => {
   );
 };
 
-const StyledSearchBox = styled.input`
+const SearchBox = styled.input`
   padding: 0.938rem;
   background-color: #FBFCD3;
   border-radius: 0.7rem;
@@ -38,4 +38,4 @@ const StyledSearchBox = styled.input`
   }
 `;
 
-export default SearchBox;
+export default SearchBoxComponent;
