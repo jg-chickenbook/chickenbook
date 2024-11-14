@@ -20,7 +20,7 @@ export const members: Profile[] = [
     phone: "+420123456789",
     email: "jan.novak@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti.",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "src/assets/chick-chicko.png"
   },
   {
     _id: 2,
@@ -40,7 +40,7 @@ export const members: Profile[] = [
     phone: "+42012456789",
     email: "emilie.podhorska@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti.",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "src/assets/chick-chicko.png"
   },
   {
     _id: 3,
@@ -60,7 +60,7 @@ export const members: Profile[] = [
     phone: "123456789",
     email: "zikmund.vysoky@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti.",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "src/assets/chick-chicko.png"
   },
   {
     _id: 4,
@@ -80,7 +80,7 @@ export const members: Profile[] = [
     phone: "123456789",
     email: "eliska.jedla@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti.",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "src/assets/chick-chicko.png"
   },
   {
     _id: 5,
@@ -100,7 +100,7 @@ export const members: Profile[] = [
     phone: "123456789",
     email: "martin.zabrana@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti.",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "src/assets/chick-chicko.png"
   },
   {
     _id: 6,
@@ -120,7 +120,7 @@ export const members: Profile[] = [
     phone: "123456789",
     email: "jana.lorenz@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti.",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "src/assets/chick-chicko.png"
   },
   {
     _id: 7,
@@ -140,7 +140,7 @@ export const members: Profile[] = [
     phone: "123456789",
     email: "emil.varga@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti.",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "src/assets/chick-chicko.png"
   },
   {
     _id: 8,
@@ -160,7 +160,7 @@ export const members: Profile[] = [
     phone: "123456789",
     email: "lenka.masrnovska@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti.",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "src/assets/chick-chicko.png"
   },
   {
     _id: 9,
@@ -180,7 +180,7 @@ export const members: Profile[] = [
     phone: "123456789",
     email: "jonatan.ledek@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti.",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "src/assets/chick-chicko.png"
   },
   {
     _id: 10,
@@ -200,7 +200,7 @@ export const members: Profile[] = [
     phone: "123456789",
     email: "eva.jedla@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti.",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "src/assets/chick-chicko.png"
   },
   {
     _id: 11,
@@ -220,7 +220,7 @@ export const members: Profile[] = [
     phone: "123456789",
     email: "ivan.hrozny@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti.",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "src/assets/chick-chicko.png"
   },
   {
     _id: 12,
@@ -240,6 +240,6 @@ export const members: Profile[] = [
     phone: "123456789",
     email: "zuzana.svestkova@gmaili.com",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl sed elit. Sed auctor, eros ac ultrices faucibus, augue neque tincidunt nisl, nec luctus justo erat in felis. Praesent ac lectus id nisl aliquam luctus. Donec at est eget nisl aliquet aliquam. Nullam nec urna ut lorem aliquet aliquam. Nulla facilisi. Nullam nec eros quis velit aliquet elementum. Suspendisse potenti.",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "src/assets/chick-chicko.png"
   }
 ];
