@@ -1,5 +1,6 @@
 export type Profile = {
-  _id: number;
+  _id: { $oid: string};
+  userId: string;
   status: string;
   name: string;
   headline: string;

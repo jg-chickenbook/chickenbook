@@ -2,7 +2,7 @@ import Card from "./Card";
 
 type CardListProps = {
   profiles: {
-    _id: number;
+    _id: { $oid: string};
     name: string;
     headline: string;
     status: string;
@@ -16,7 +16,7 @@ type CardListProps = {
 
 const CardList = ({ profiles }: CardListProps) => {
   const cardGenerator = profiles.map((profile) => {
-    return <Card profile={ profile } key={ profile._id } />;
+    return <Card profile={ profile } key={ profile._id.$oid } />;
   });
 
   return (

@@ -8,7 +8,7 @@ import useFetchData from "../../hooks/useFetchData";
 
 export default function Homepage() {
 
-  const { data: profiles, loading, error } = useFetchData<Profile[]>("profiles");
+  const { data: profiles, loading, error } = useFetchData<Profile[]>('profiles');
 
   const [searchfield, setSearchfield] = useState("");
 
@@ -29,7 +29,7 @@ export default function Homepage() {
   return (
     <>
   <Header onSearchChange={onSearchChange} />
-      <main>  
+      <main>
         {loading ? <div>Loading...</div> : error ? <div>Error: {error}</div> :
           ( <ScrollView>
             <CardList profiles={filterProfiles || []} />

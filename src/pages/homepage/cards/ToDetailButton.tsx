@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 type ToDetailButtonProps = {
   profile: {
-    _id: number;
+    _id: { $oid: string};
   };
 };
 
@@ -13,5 +13,5 @@ const ToDetailButton = ({ profile }: ToDetailButtonProps) => {
     </Link>
   );
 };
- 
+
 export default ToDetailButton;
