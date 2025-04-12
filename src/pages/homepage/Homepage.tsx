@@ -4,7 +4,7 @@ import { Profile } from "../../data/ProfileType";
 import ScrollView from "./ScrollView";
 import "../login/LogInForm";
 import Header from "../../components/header/Header";
-import useFetchData from "../../hooks/useFetchData";
+import useFetchData from "../../hooks/useApiRequest";
 
 export default function Homepage() {
 

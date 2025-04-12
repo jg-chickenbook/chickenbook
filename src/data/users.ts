@@ -1,200 +1,222 @@
-const users = [{
-  "_id": {
-    "$oid": "67f2a743b340655ac7f17058"
-  },
+import { User } from "./UserTypes";
+
+export const users: User[] = [{
+  "_id": "67f2a743b340655ac7f17058",
   "userId": "36b8f84d-df4e-4d49-b662-bcde71a8764f",
   "userName": "JanNovák",
   "email": "jan.novak@example.com",
   "password": "heslo1",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f17059"
-  },
+  "_id": "67f2a743b340655ac7f17059",
   "userId": "42c9f76e-a13a-4b98-8fa3-d5e16b4c9228",
   "userName": "PetraSvobodová",
   "email": "petra.svobodova@example.com",
   "password": "heslo2",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f1705a"
-  },
+  "_id": "67f2a743b340655ac7f1705a",
   "userId": "57d8f35a-cb89-4c2a-bc6d-e95b8de19a73",
   "userName": "MartinKovář",
   "email": "martin.kovar@example.com",
   "password": "heslo3",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f1705b"
-  },
+  "_id": "67f2a743b340655ac7f1705b",
   "userId": "68e1d24b-f9c7-4e11-a97e-0fe21b3d8e55",
   "userName": "LucieNováková",
   "email": "lucie.novakova@example.com",
   "password": "heslo4",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f1705c"
-  },
+  "_id": "67f2a743b340655ac7f1705c",
   "userId": "79f2c63d-e87a-4b5f-b159-129a0e2d9e38",
   "userName": "TomášKučera",
   "email": "tomas.kucera@example.com",
   "password": "heslo5",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f1705d"
-  },
+  "_id": "67f2a743b340655ac7f1705d",
   "userId": "85a3d71e-b9d6-4c8e-a247-2193bf5e6c1a",
   "userName": "KateřinaProcházková",
   "email": "katerina.prochazkova@example.com",
   "password": "heslo6",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f1705e"
-  },
+  "_id": "67f2a743b340655ac7f1705e",
   "userId": "91b4e82f-c0e5-4d7d-b33a-3072c46d8f47",
   "userName": "FilipČerný",
   "email": "filip.cerny@example.com",
   "password": "heslo7",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f1705f"
-  },
+  "_id": "67f2a743b340655ac7f1705f",
   "userId": "a2c5f93g-d1f4-4e8e-b42b-4183d79e9d28",
   "userName": "MonikaVeselá",
   "email": "monika.vesela@example.com",
   "password": "heslo8",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f17060"
-  },
+  "_id": "67f2a743b340655ac7f17060",
   "userId": "b3d6g04h-e2g5-5f9f-c53c-5294e80f0e39",
   "userName": "JakubDvořák",
   "email": "jakub.dvorak@example.com",
   "password": "heslo9",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f17061"
-  },
+  "_id": "67f2a743b340655ac7f17061",
   "userId": "c4e7h15i-f3h6-6g0g-d64d-6305f91g1f40",
   "userName": "TerezaNěmcová",
   "email": "tereza.nemcova@example.com",
   "password": "heslo10",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f17062"
-  },
+  "_id": "67f2a743b340655ac7f17062",
   "userId": "d5f8i26j-g4i7-7h1h-e75e-7416g02h2g51",
   "userName": "OndřejHolub",
   "email": "ondrej.holub@example.com",
   "password": "heslo11",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f17063"
-  },
+  "_id": "67f2a743b340655ac7f17063",
   "userId": "e6g9j37k-h5j8-8i2i-f86f-8527h13i3h62",
   "userName": "BarboraMarková",
   "email": "barbora.markova@example.com",
   "password": "heslo12",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f17064"
-  },
+  "_id": "67f2a743b340655ac7f17064",
   "userId": "f7h0k48l-i6k9-9j3j-g97g-9638i24j4i73",
   "userName": "DavidHorák",
   "email": "david.horak@example.com",
   "password": "heslo13",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f17065"
-  },
+  "_id": "67f2a743b340655ac7f17065",
   "userId": "g8i1l59m-j7l0-0k4k-h08h-0749j35k5j84",
   "userName": "EvaPokorná",
   "email": "eva.pokorna@example.com",
   "password": "heslo14",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f17066"
-  },
+  "_id": "67f2a743b340655ac7f17066",
   "userId": "h9j2m60n-k8m1-1l5l-i19i-1850k46l6k95",
   "userName": "PetrRůžička",
   "email": "petr.ruzicka@example.com",
   "password": "heslo15",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f17067"
-  },
+  "_id": "67f2a743b340655ac7f17067",
   "userId": "i0k3n71o-l9n2-2m6m-j20j-2961l57m7l06",
   "userName": "ZuzanaKolářová",
   "email": "zuzana.kolarova@example.com",
   "password": "heslo16",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f17068"
-  },
+  "_id": "67f2a743b340655ac7f17068",
   "userId": "j1l4o82p-m0o3-3n7n-k31k-3072m68n8m17",
   "userName": "RadekBeneš",
   "email": "radek.benes@example.com",
   "password": "heslo17",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f17069"
-  },
+  "_id": "67f2a743b340655ac7f17069",
   "userId": "k2m5p93q-n1p4-4o8o-l42l-4183n79o9n28",
   "userName": "KarolínaŠimková",
   "email": "karolina.simkova@example.com",
   "password": "heslo18",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f1706a"
-  },
+  "_id": "67f2a743b340655ac7f1706a",
   "userId": "l3n6q04r-o2q5-5p9p-m53m-5294o80p0o39",
   "userName": "MarekDostál",
   "email": "marek.dostal@example.com",
   "password": "heslo19",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 },
 {
-  "_id": {
-    "$oid": "67f2a743b340655ac7f1706b"
-  },
+  "_id": "67f2a743b340655ac7f1706b",
   "userId": "m4o7r15s-p3r6-6q0q-n64n-6305p91q1p40",
   "userName": "NikolaKrálová",
   "email": "nikola.kralova@example.com",
   "password": "heslo20",
-  "authToken": ""
+  "authToken": "",
+  "createdAt": "2025-04-12T19:56:53.909Z",
+  "updatedAt": "2025-04-12T19:56:53.909Z",
+  "__v": 0
 }]

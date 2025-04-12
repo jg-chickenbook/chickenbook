@@ -4,7 +4,7 @@ import Header from "./Header";
 import BubbleContainer from "./bubbles/BubbleContainer";
 import ButtonBack from "./ButtonBack";
 import { Profile } from "../../data/ProfileType";
-import useFetchData from "../../hooks/useFetchData";
+import useFetchData from "../../hooks/useApiRequest";
 import chicken from "../../assets/chick-chicko.png";
 
 export default function Detail() {
@@ -23,7 +23,7 @@ export default function Detail() {
     <>
       {loading ? <div>Loading...</div> : error ? <div>Error: {error}</div> :
         (<CardView>
-          <Header key={ profile?._id.$oid }
+          <Header key={ profile?._id }
             name={ profile?.name || "No name" }
             headline={ profile?.headline || "No headline"}
             status={ profile?.status || "No status" }

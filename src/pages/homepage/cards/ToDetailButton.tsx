@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 type ToDetailButtonProps = {
   profile: {
-    _id: { $oid: string};
+    _id: string;
   };
 };
 
