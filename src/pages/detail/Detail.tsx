@@ -23,11 +23,12 @@ export default function Detail() {
     <>
       {loading ? <div>Loading...</div> : error ? <div>Error: {error}</div> :
         (<CardView>
-          <Header key={ profile?._id }
+          <Header key={ profile?._id.$oid }
             name={ profile?.name || "No name" }
             headline={ profile?.headline || "No headline"}
             status={ profile?.status || "No status" }
-            profilePic={ profile?.profilePic || chicken }
+            profilePic={ chicken }
+            // profilePic={ profile?.profilePic || chicken }
           />
           <BubbleContainer
             skillsList={ skills }

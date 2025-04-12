@@ -1,22 +1,20 @@
 import { useState, useEffect } from "react";
 
 type FetchReturnType<T> = {
-  data: T | null
-  loading: boolean
-  error: string | null
+  data: T | null;
+  loading: boolean;
+  error: string | null;
 };
 
 /**
- * Custom hook for fetching data from a specified URL.
+ * Custom hook for fetching data from a specified endpoint.
  * 
- * Example implementation:
- * - const { data: profiles, loading, error } = useFetchData<Profile[]>("profiles");
  * @template T - The type of data to be fetched.
- * @param {string} url - The endpoint used to fetch data, e.g. "profiles" for fetching all profiles
+ * @param {string} endpoint - The endpoint used to fetch data (e.g., "profiles", "users")
  * @returns {FetchReturnType<T>} - An object containing the fetched data, loading state, and error message.
  */
 const useFetchData = <T>(endpoint: string): FetchReturnType<T> => {
-  const url = `http://localhost:3000/api/${endpoint}`; // Loccalhost will be replaced with the actual URL
+  const url = `http://localhost:3000/api/${endpoint}`;
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -39,5 +37,15 @@ const useFetchData = <T>(endpoint: string): FetchReturnType<T> => {
 
   return { data, loading, error };
 };
+
+// Predefined endpoints
+export const ENDPOINTS = {
+  PROFILES: "profiles",
+  USERS: "users",
+};
+
+// Helper hooks for specific data types
+export const useProfiles = <T>() => useFetchData<T>(ENDPOINTS.PROFILES);
+export const useUsers = <T>() => useFetchData<T>(ENDPOINTS.USERS);
 
 export default useFetchData;

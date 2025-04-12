@@ -7,11 +7,12 @@ type HeaderProps = {
   profilePic: string;
 };
 
-const Header = ({ name, headline, status, profilePic }: HeaderProps) => {
+const Header = ({ name, headline, status }: HeaderProps) => {
 
   return (
     <header className="header__detail">
-      <img className="detail__image" src={ profilePic || JgChicken } />
+      {/* <img className="detail__image" src={ profilePic || JgChicken } /> */}
+      <img className="detail__image" src={ JgChicken } />
       <div className="detail__inner">
         <h1 className="detail__name">{ name }</h1>
         <h2 className="detail__position">{ headline }</h2>
