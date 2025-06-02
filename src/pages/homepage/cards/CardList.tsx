@@ -18,7 +18,6 @@ type CardListProps = {
 
 const CardList = ({ profiles }: CardListProps) => {
   const cardGenerator = profiles.map((profile) => {
-    console.log(profile );
     return <Card profile={ profile } key={ profile._id} />;
   });
 

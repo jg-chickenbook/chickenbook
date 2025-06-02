@@ -18,6 +18,7 @@ const MainSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap:1rem;
 
   @media screen and (min-width: 768px) {
     row-gap: 1rem;

@@ -5,7 +5,7 @@ export const apiServiceInterceptor = async (endpoint: string, options?: RequestI
     // Přidání základní URL k endpointu
     const url = `${BASE_URL}/${endpoint}`;
 
-    // Přidání globální logiky pro požadavky (např. hlavičky)
+    // Globální logika pro požadavky
     const modifiedOptions: RequestInit = {
       ...options,
       headers: {
@@ -16,7 +16,7 @@ export const apiServiceInterceptor = async (endpoint: string, options?: RequestI
 
     const response = await fetch(url, modifiedOptions);
 
-    // Zpracování odpovědi (např. kontrola chyb)
+    // Zpracování odpovědi-error handling
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
