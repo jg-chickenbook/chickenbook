@@ -4,12 +4,14 @@ type HeaderProps = {
   name: string;
   headline: string;
   status: string;
+  profilePic: string;
 };
 
 const Header = ({ name, headline, status }: HeaderProps) => {
 
   return (
     <header className="header__detail">
+      {/* <img className="detail__image" src={ profilePic || JgChicken } /> */}
       <img className="detail__image" src={ JgChicken } />
       <div className="detail__inner">
         <h1 className="detail__name">{ name }</h1>
