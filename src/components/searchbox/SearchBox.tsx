@@ -29,13 +29,19 @@ const SearchBox = styled.input`
   }
 
   @media (min-width: 992px) {
-    min-width: 20rem;
+    min-width: 30rem;
   }
 
-  @media (max-width: 768px) {
-    width: 100%;
-    order: 3;
+  @media (min-width: 1500px) {
+    min-width: 35rem;
   }
+
+  @media (max-width: 992px) {
+    order: 3;
+    margin-left: 0;
+    width: 100%;
+  }
+
 `;
 
 export default SearchBoxComponent;

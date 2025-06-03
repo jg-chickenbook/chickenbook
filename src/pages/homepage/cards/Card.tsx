@@ -4,7 +4,8 @@ import ToDetailButton from "./ToDetailButton";
 
 type CardProps = {
   profile: {
-    _id: { $oid: string};
+    _id: string;
+    userId: string;
     name: string;
     headline: string;
     status: string;
@@ -12,12 +13,11 @@ type CardProps = {
 };
 
 const Card = ({ profile }: CardProps) => {
-  console.log('img', chicken);
   return (
     <div className="card">
       <img className="card__image" alt="Profile image" src={ chicken } />
       <CardInfo profile={ profile } />
-      <ToDetailButton key={ profile._id.$oid } profile={ profile } />
+      <ToDetailButton key={ profile._id } profile={ profile } />
     </div>
   );
 };

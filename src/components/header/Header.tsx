@@ -95,21 +95,14 @@ const Header = styled.header`
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
     border-bottom: 2px solid var(--color-secondary);
     padding: 0 3rem;
     padding-block: 1rem;
     margin-bottom: 1.5rem;
-
-    @media (max-width: 768px) {
-      gap: 1rem;
-      padding: 0 .5rem;
-      border: none;
-    }
 `;
 
 const LogIn = styled(Link)`
-
     color: var(--color-text-900);
     font-size: 1.2rem;
     font-weight: 900;
@@ -120,17 +113,21 @@ const LogIn = styled(Link)`
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     transition: all .5s ease;
+    display: inline-block;
     &:hover {
       background-color: var(--color-button-hover);
       color: var(--color-text);
       box-shadow: 3px 5px var(--color-text-900);
     }
-  }
 
-  @media (max-width: 768px) {
-    order: 2;
-    margin: 0;
-  }
+    @media (max-width: 768px) {
+      order: 2;
+      margin: 0;
+    }
+
+    @media (max-width: 400px) {
+      width: 100%;
+    }
 `;
 
 const Title = styled.h1`
@@ -147,7 +144,7 @@ const Title = styled.h1`
 const UserBox = styled.div`
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 `;
 
 const NavUsername = styled.span`

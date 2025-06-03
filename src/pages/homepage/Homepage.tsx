@@ -4,7 +4,8 @@ import { Profile } from "../../data/ProfileType";
 import ScrollView from "./ScrollView";
 import "../login/LogInForm";
 import Header from "../../components/header/Header";
-import useFetchData from "../../hooks/useFetchData";
+import useFetchData from "../../hooks/useApiRequest";
+import styled from "styled-components";
 
 export default function Homepage() {
 
@@ -29,14 +30,18 @@ export default function Homepage() {
   return (
     <>
   <Header onSearchChange={onSearchChange} />
-      <main>
+      <MainSection>
         {loading ? <div>Loading...</div> : error ? <div>Error: {error}</div> :
           ( <ScrollView>
             <CardList profiles={filterProfiles || []} />
           </ScrollView>)}
-      </main>
+      </MainSection>
     </>
   );
 
 
 }
+
+const MainSection = styled.main`
+padding: 1rem;
+`;
