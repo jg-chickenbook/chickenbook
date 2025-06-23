@@ -22,23 +22,27 @@ export default function Detail() {
   return (
     <>
       {loading ? <div>Loading...</div> : error ? <div>Error: {error}</div> :
-        (<CardView>
-          <Header key={ profile?._id }
-            name={ profile?.name || "No name" }
-            headline={ profile?.headline || "No headline"}
-            status={ profile?.status || "No status" }
-            profilePic={ chicken }
-            // profilePic={ profile?.profilePic || chicken }
-          />
-          <BubbleContainer
-            skillsList={ skills }
-            projectsList={ projects }
-            email={ profile?.email || "No email" }
-            phone={ profile?.phone || "No phone" }
-            about={ profile?.about || "No about text" }
-          />
-        </CardView>)}
-      <ButtonBack />
+        (<div style={{ position: "relative", display: "flex", justifyContent: "center" }}>
+          <CardView>
+            <Header key={ profile?._id }
+              name={ profile?.name || "No name" }
+              headline={ profile?.headline || "No headline"}
+              status={ profile?.status || "No status" }
+              profilePic={ chicken }
+              // profilePic={ profile?.profilePic || chicken }
+            />
+            <BubbleContainer
+              skillsList={ skills }
+              projectsList={ projects }
+              email={ profile?.email || "No email" }
+              phone={ profile?.phone || "No phone" }
+              about={ profile?.about || "No about text" }
+            />
+          </CardView>
+          <div style={{ position: "absolute", right: "2rem", top: "0" }}>
+            <ButtonBack />
+          </div>
+        </div>)}
     </>
   );
 }
