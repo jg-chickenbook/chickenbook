@@ -9,7 +9,7 @@ import styled from "styled-components";
 
 export default function Homepage() {
 
-  const { data: profiles, loading, error } = useFetchData<Profile[]>('profiles');
+  const { data: profiles, loading, error } = useFetchData<Profile[]>("profiles");
 
   const [searchfield, setSearchfield] = useState("");
 
@@ -25,11 +25,9 @@ export default function Homepage() {
     );
   });
 
-
-
   return (
     <>
-  <Header onSearchChange={onSearchChange} />
+      <Header onSearchChange={onSearchChange} />
       <MainSection>
         {loading ? <div>Loading...</div> : error ? <div>Error: {error}</div> :
           ( <ScrollView>
@@ -38,8 +36,6 @@ export default function Homepage() {
       </MainSection>
     </>
   );
-
-
 }
 
 const MainSection = styled.main`
