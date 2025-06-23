@@ -1,21 +1,17 @@
-import { useState } from "react";
 import CardList from "./cards/CardList";
 import { Profile } from "../../data/ProfileType";
 import ScrollView from "./ScrollView";
 import "../login/LogInForm";
-import Header from "../../components/header/Header";
 import useFetchData from "../../hooks/useApiRequest";
 import styled from "styled-components";
 
-export default function Homepage() {
+interface HomepageProps {
+  searchfield?: string;
+}
+
+export default function Homepage({ searchfield = "" }: HomepageProps) {
 
   const { data: profiles, loading, error } = useFetchData<Profile[]>("profiles");
-
-  const [searchfield, setSearchfield] = useState("");
-
-  const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchfield(event.target.value);
-  };
 
   const filterProfiles = profiles?.filter((profile) => {
     return (
@@ -26,15 +22,12 @@ export default function Homepage() {
   });
 
   return (
-    <>
-      <Header onSearchChange={onSearchChange} />
-      <MainSection>
-        {loading ? <div>Loading...</div> : error ? <div>Error: {error}</div> :
-          ( <ScrollView>
-            <CardList profiles={filterProfiles || []} />
-          </ScrollView>)}
-      </MainSection>
-    </>
+    <MainSection>
+      {loading ? <div>Loading...</div> : error ? <div>Error: {error}</div> :
+        ( <ScrollView>
+          <CardList profiles={filterProfiles || []} />
+        </ScrollView>)}
+    </MainSection>
   );
 }
 
